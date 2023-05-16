@@ -1,0 +1,20 @@
+{
+	"location": [
+		"locations__en__990d59ddfa7310ea76403ad6230015f5.json",
+		"locations__en__52578b8d2e7bea511da37d5fa9288c64.json",
+		"locations__en__fd70b029ca408ea0f22db6283a1f379e.json",
+		"locations__en__0a054bcf1882d80c7a6f82f25a690ab5.json",
+		"locations__en__49e13846c8dca68e9c75d09bc9624f3b.json",
+		"locations__en__a3374c24f6c6d64f4fe104369e620012.json",
+		"locations__en__59a5bccd6fb4531f7183fcb9368c76e4.json",
+		"locations__en__1b806da6dbc109bd7a42ac4fba888e44.json",
+		"locations__en__40eb17f850268a9783fc244b03750859.json",
+		"locations__en__60f0849e0a65aaa6ccdcf56f38015242.json"
+	],
+	"locator": [
+		"cog-internal-feature-static-file-generation-locator__en__cfcd208495d565ef66e7dff9f98764da.json"
+	],
+	"robots": [
+		"cog-internal-feature-static-file-generation-robots__en__cfcd208495d565ef66e7dff9f98764da.json"
+	]
+}

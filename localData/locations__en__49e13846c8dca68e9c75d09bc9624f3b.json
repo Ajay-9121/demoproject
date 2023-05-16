@@ -1,0 +1,320 @@
+{
+	"__": {
+		"entityPageSet": {
+			"plugin": {}
+		},
+		"name": "location",
+		"streamId": "locations",
+		"templateType": "JS"
+	},
+	"_site": {
+		"c_footer": {
+			"contact": {
+				"label": "Contact us",
+				"link": "#",
+				"linkType": "OTHER"
+			},
+			"contactlogo": {
+				"height": 128,
+				"url": "https://a.mktgcdn.com/p-sandbox/pjV86jyvPGDW3lCaIRmZ0C7OBPgED_S1UbL7R9A9mu0/128x128.png",
+				"width": 128
+			},
+			"copyright": "MGM Timber - Copyright © 2023. All Rights Reserved, all 3rd party trademarks acknowledged.",
+			"footerlogo": {
+				"height": 136,
+				"url": "https://a.mktgcdn.com/p-sandbox/-YdyfEMNRXS61igbHtiOrt8mA_VWamXma50epN4rYvw/272x136.png",
+				"width": 272
+			},
+			"termcondetion": "Terms \u0026 ConditionsPrivacy PolicyCookie Policy"
+		},
+		"c_headerMenu": {
+			"menu": [
+				{
+					"label": "Timber",
+					"link": "#",
+					"linkType": "OTHER"
+				},
+				{
+					"label": "Landscaping",
+					"link": "#",
+					"linkType": "OTHER"
+				},
+				{
+					"label": "Sheet Materials",
+					"link": "#",
+					"linkType": "OTHER"
+				},
+				{
+					"label": "Kitchens \u0026 Bathrooms",
+					"link": "#",
+					"linkType": "OTHER"
+				},
+				{
+					"label": "Doors, Windows \u0026 Joinery",
+					"link": "#",
+					"linkType": "OTHER"
+				},
+				{
+					"label": "Flooring",
+					"link": "#",
+					"linkType": "OTHER"
+				}
+			]
+		},
+		"c_paymentGetway": {
+			"payment": [
+				{
+					"height": 41,
+					"url": "https://a.mktgcdn.com/p-sandbox/n6_FYJNJbGRnWteXKv5tZy-dWTo35R9XxAHGSAwdyxA/61x41.png",
+					"width": 61
+				},
+				{
+					"height": 41,
+					"url": "https://a.mktgcdn.com/p-sandbox/y4WDQFTCTFtKIuj9ETWDBGa7SfVy9RmkeIjrfPg2XAU/61x41.png",
+					"width": 61
+				},
+				{
+					"height": 41,
+					"url": "https://a.mktgcdn.com/p-sandbox/0KQ8aUy-yKXQaqqCbyi9UFv9PgfqIzt_wbPmYtd208E/61x41.png",
+					"width": 61
+				},
+				{
+					"height": 225,
+					"url": "https://a.mktgcdn.com/p-sandbox/pEpTQi1iO25eqXz7IngHAfNweR-9ejCPDSqAOI_lZwQ/225x225.jpg",
+					"width": 225
+				},
+				{
+					"height": 41,
+					"url": "https://a.mktgcdn.com/p-sandbox/KD2fyZwru4oiO60x3SZNECYrdi-eJEGmOaDLf2jnoL0/59x41.png",
+					"width": 59
+				}
+			]
+		},
+		"c_socialicon": {
+			"socialicon": [
+				{
+					"height": 30,
+					"url": "https://a.mktgcdn.com/p-sandbox/Uxlcw8wc5rJhxiTdhyqVg8fA5Mus0ig1tJw0ceP77rs/30x30.png",
+					"width": 30
+				},
+				{
+					"height": 100,
+					"url": "https://a.mktgcdn.com/p-sandbox/ijaQaop7utI56zy3CZtFu5Cwah8WRqjekw-BZ9ZzENQ/100x100.png",
+					"width": 100
+				},
+				{
+					"height": 100,
+					"url": "https://a.mktgcdn.com/p-sandbox/Ot9StbhuzIKybdfUFk2QqJ2RLI-LGzLZ8sZA7H0R1Fk/100x100.png",
+					"width": 100
+				},
+				{
+					"height": 30,
+					"url": "https://a.mktgcdn.com/p-sandbox/EJxmSjV9WbWrPhf4ZSWnhFhIXjZkD_aNkq1NjBUQcFI/30x30.png",
+					"width": 30
+				},
+				{
+					"height": 30,
+					"url": "https://a.mktgcdn.com/p-sandbox/nLLAYgmBUVakjEtF_GmToVj0H3XxfSRdieDxM-NqVf8/30x30.png",
+					"width": 30
+				}
+			]
+		},
+		"c_topBar": {
+			"branchLocator": "Branch Locator",
+			"jobList": "Job list",
+			"jobLogo": {
+				"height": 225,
+				"url": "https://a.mktgcdn.com/p-sandbox/L2fnZBnPjg0NBmwmxknrhHM0IFLW7pbAqHQQJgRtZGM/225x225.jpg",
+				"width": 225
+			},
+			"locationLogo": {
+				"height": 225,
+				"url": "https://a.mktgcdn.com/p-sandbox/i9bDr3Amhepeoy2il0u7SRd1v5coIV1rycjsdUvyzsI/225x225.png",
+				"width": 225
+			},
+			"logo": {
+				"height": 154,
+				"url": "https://a.mktgcdn.com/p-sandbox/XI2QUXxyv-uDzB0BntFgl24ZdkFHNa-KnpX2oQRMjbU/304x154.png",
+				"width": 304
+			}
+		},
+		"id": "5752520309846180000",
+		"meta": {
+			"entityType": {
+				"id": "ce_globalData",
+				"uid": 114884
+			},
+			"locale": "en"
+		},
+		"name": "Globar data",
+		"uid": 40471510
+	},
+	"address": {
+		"city": "Inverness",
+		"countryCode": "GB",
+		"line1": "Unit F \u0026 G,24 Longman Drive",
+		"localizedCountryName": "United Kingdom",
+		"localizedRegionName": "Scottish Highlands",
+		"postalCode": "IV1 1SU",
+		"region": "Scottish Highlands"
+	},
+	"businessId": 3199867,
+	"c_aboutUs": {
+		"aboutheading": "About Us",
+		"aboutimg": {
+			"height": 1200,
+			"url": "https://a.mktgcdn.com/p-sandbox/x02246bGb2nNKtrXKf7IB2yHiwKLVniMeEAXWiFX694/1070x1200.png",
+			"width": 1070
+		},
+		"description": "At MGM Timber, we are Scotland's leading supplier of Timber supplies. We bring high-quality, exceptional timber products to projects all across Scotland, and this includes the Perth and Perthshire area.\nWe endeavour to stock a very wide variety of",
+		"showMore": {
+			"label": "...Show more",
+			"link": "#",
+			"linkType": "OTHER"
+		}
+	},
+	"c_slider": {
+		"featuredBrands": "Featured Brands",
+		"logo": [
+			{
+				"height": 763,
+				"url": "https://a.mktgcdn.com/p-sandbox/9veuYPubzdG3pv19ip0gfY3IoqRXn1O2Atc-U1AROF0/1920x763.jpg",
+				"width": 1920
+			},
+			{
+				"height": 401,
+				"url": "https://a.mktgcdn.com/p-sandbox/z03ZcpeKGY16RqlkkaWaVsfXSWbSyNzRCmHpBpo0azw/622x401.png",
+				"width": 622
+			},
+			{
+				"height": 217,
+				"url": "https://a.mktgcdn.com/p-sandbox/dIDiJ0DjxD9v6hiGzaFwbJSG0oxEn6iyqf_2cdLOIP0/232x217.png",
+				"width": 232
+			},
+			{
+				"height": 349,
+				"url": "https://a.mktgcdn.com/p-sandbox/5y5AHuLDSwP6ONwtMXtdVBrAg2eb3iSpO3okIgdUu7A/714x349.png",
+				"width": 714
+			},
+			{
+				"height": 267,
+				"url": "https://a.mktgcdn.com/p-sandbox/tic-8wg3UPh5aEP_g4O0tbNcYdm5H3CmKH2M0Dikdsk/935x267.png",
+				"width": 935
+			},
+			{
+				"height": 302,
+				"url": "https://a.mktgcdn.com/p-sandbox/4klbD8vvJGykGyM7ZqCqaBYqe3aF7KCqmQ95w52aZqg/825x302.png",
+				"width": 825
+			},
+			{
+				"height": 208,
+				"url": "https://a.mktgcdn.com/p-sandbox/PFZiCKFXOkvc8-qPZYMRJk6OTrnTcaHO8tGFJw6SCgk/500x208.png",
+				"width": 500
+			},
+			{
+				"height": 155,
+				"url": "https://a.mktgcdn.com/p-sandbox/5OWVAlNHOMTHU1h4zTw0ZJ6Ng3azVu-w8w2belubrMM/324x155.png",
+				"width": 324
+			},
+			{
+				"height": 1200,
+				"url": "https://a.mktgcdn.com/p-sandbox/N3FJjlyLHnyUUagoi8EymhULTxkucKHHjq6QS6Bs64A/1704x1200.jpg",
+				"width": 1704
+			},
+			{
+				"height": 500,
+				"url": "https://a.mktgcdn.com/p-sandbox/CPkT9_08LjQS7ULn0IntIZ-R1zDU54ASLfXOjK_lFYs/500x500.png",
+				"width": 500
+			}
+		]
+	},
+	"cityCoordinate": {
+		"latitude": 57.51384354,
+		"longitude": -4.26495218
+	},
+	"hours": {
+		"friday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"monday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"saturday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"sunday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"thursday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"tuesday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		},
+		"wednesday": {
+			"isClosed": false,
+			"openIntervals": [
+				{
+					"end": "17:00",
+					"start": "07:00"
+				}
+			]
+		}
+	},
+	"id": "MGMInverness",
+	"key": "0:location:knowledgeGraph:40802683:en",
+	"locale": "en",
+	"meta": {
+		"entityType": {
+			"id": "location",
+			"uid": 0
+		},
+		"locale": "en"
+	},
+	"name": "MGM Timber Inverness",
+	"siteDomain": "",
+	"siteId": 0,
+	"siteInternalHostName": "",
+	"timezone": "Europe/London",
+	"uid": 40802683,
+	"yextDisplayCoordinate": {
+		"latitude": 57.4918083,
+		"longitude": -4.2311946
+	}
+}
