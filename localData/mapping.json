@@ -3,6 +3,18 @@
 		"region__en__b5ba7cb0191091dabcc7129966d76e33.json",
 		"region__en__8e34978410f01b113f2d7f405cc5d615.json"
 	],
+	"city": [
+		"matlan-city__en__ac33d5c865d27adc5eb2a157b3891f7c.json",
+		"matlan-city__en__be181360c776248b40d47169fefafb5d.json",
+		"matlan-city__en__277318dc945ea76ffeb258c1c4b1d1f6.json",
+		"matlan-city__en__255efaf5704890ef7c9f945db6bf2e28.json",
+		"matlan-city__en__8f48ee80c2abe38c029944f8d7a64370.json",
+		"matlan-city__en__a1b096fc87c1c263ef6433faadfb4350.json",
+		"matlan-city__en__8bc74993f02677d56407dc5a6ea4e50c.json",
+		"matlan-city__en__3d37c088b249beca8840170a229be2f6.json",
+		"matlan-city__en__58903b08386451870ddc02ca198a1ce3.json",
+		"matlan-city__en__7d236704dd63adf482f9fbb1323fef8d.json"
+	],
 	"country": [
 		"matlan-country__en__267dd3a6f035d3e57124776e9ae4f517.json"
 	],
