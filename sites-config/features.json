@@ -9,6 +9,14 @@
       }
     },
     {
+      "name": "country",
+      "streamId": "matlan-country",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
       "name": "location",
       "streamId": "locations",
       "templateType": "JS",
@@ -27,6 +35,14 @@
       "name": "robots",
       "templateType": "JS",
       "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "State",
+      "streamId": "region",
+      "templateType": "JS",
+      "entityPageSet": {
         "plugin": {}
       }
     }
@@ -50,6 +66,40 @@
       }
     },
     {
+      "$id": "matlan-country",
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "address",
+        "mainPhone",
+        "slug",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.meta.entityType",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.address",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_directoryChildren.name",
+        "dm_directoryChildren.dm_baseEntityCount",
+        "dm_directoryChildren.dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_directoryChildren.dm_directoryChildren.name",
+        "dm_directoryChildren.dm_directoryChildren.dm_directoryChildren.slug"
+      ],
+      "filter": {
+        "entityTypes": [
+          "ce_country"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
       "$id": "locations",
       "fields": [
         "id",
@@ -66,11 +116,49 @@
         "cityCoordinate",
         "c_bannerSection",
         "c_aboutUs",
-        "c_slider"
+        "c_slider",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.dm_baseEntityCount",
+        "dm_directoryParents.meta.entityType"
       ],
       "filter": {
         "entityTypes": [
           "location"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "region",
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "address",
+        "slug",
+        "dm_directoryParents.name",
+        "dm_directoryParents.slug",
+        "dm_directoryParents.dm_baseEntityCount",
+        "dm_directoryParents.meta.entityType",
+        "dm_directoryChildren.name",
+        "dm_directoryChildren.address",
+        "dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_baseEntityCount",
+        "dm_directoryChildren.dm_directoryChildren.name",
+        "dm_directoryChildren.dm_directoryChildren.id",
+        "dm_directoryChildren.dm_directoryChildren.slug",
+        "dm_directoryChildren.dm_directoryChildren.address"
+      ],
+      "filter": {
+        "entityTypes": [
+          "ce_region"
         ]
       },
       "localization": {

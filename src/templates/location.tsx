@@ -455,12 +455,12 @@ breadcrumbScheme.push({
         {" "}
         <AnalyticsScopeProvider name={""}>
       <PageLayout _site={_site} global={undefined}>
-      <li><BreadCrumbs
+      <BreadCrumbs
               name={name}
               parents={dm_directoryParents}
               baseUrl={relativePrefixToRoot}
               address={address}
-            ></BreadCrumbs></li>
+            ></BreadCrumbs>
 
       <div className="banner-section">
             <div className='banner-text banner-dark-bg justify-center text-center' style={{backgroundImage:"url(https://a.mktgcdn.com/p-sandbox/X2RGNvx2ILDdu4Btsbx2xa-UWYchDuBUEn7svQbJd28/717x532.jpg)",backgroundSize: "cover",backgroundRepeat:"no-repeat",backgroundPosition:"center"}}>

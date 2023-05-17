@@ -232,6 +232,52 @@
 		"latitude": 56.2069931,
 		"longitude": -3.12992811
 	},
+	"dm_directoryParents": [
+		{
+			"dm_baseEntityCount": "14",
+			"meta": {
+				"entityType": {
+					"id": "ce_root",
+					"uid": 115833
+				}
+			},
+			"name": "stores Directory",
+			"slug": "stores"
+		},
+		{
+			"dm_baseEntityCount": "14",
+			"meta": {
+				"entityType": {
+					"id": "ce_country",
+					"uid": 115831
+				}
+			},
+			"name": "GB",
+			"slug": "gb"
+		},
+		{
+			"dm_baseEntityCount": "13",
+			"meta": {
+				"entityType": {
+					"id": "ce_region",
+					"uid": 115832
+				}
+			},
+			"name": "Scotland",
+			"slug": "scotland"
+		},
+		{
+			"dm_baseEntityCount": "1",
+			"meta": {
+				"entityType": {
+					"id": "ce_city",
+					"uid": 115830
+				}
+			},
+			"name": "Glenrothes",
+			"slug": "glenrothes"
+		}
+	],
 	"hours": {
 		"friday": {
 			"isClosed": false,
