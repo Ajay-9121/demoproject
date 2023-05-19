@@ -3,8 +3,8 @@
 		"entityPageSet": {
 			"plugin": {}
 		},
-		"name": "State",
-		"streamId": "region",
+		"name": "city",
+		"streamId": "city",
 		"templateType": "JS"
 	},
 	"_site": {
@@ -152,22 +152,164 @@
 	"businessId": 3199867,
 	"dm_directoryChildren": [
 		{
-			"dm_baseEntityCount": "1",
-			"dm_directoryChildren": [
-				{
-					"address": {
-						"city": "Inverness",
-						"countryCode": "GB",
-						"line1": "Unit F \u0026 G,24 Longman Drive",
-						"postalCode": "IV1 1SU",
-						"region": "Scottish Highlands"
-					},
-					"id": "MGMInverness",
-					"name": "MGM Timber Inverness"
+			"address": {
+				"city": "Edinburgh",
+				"countryCode": "GB",
+				"line1": "5 Newcraighall Road",
+				"postalCode": "EH15 3HS",
+				"region": "Scotland"
+			},
+			"hours": {
+				"friday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"monday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"saturday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"sunday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"thursday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"tuesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"wednesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
 				}
-			],
-			"name": "Inverness",
-			"slug": "inverness"
+			},
+			"id": "MGMEdinburgh",
+			"name": "MGM Timber Edinburgh",
+			"yextDisplayCoordinate": {
+				"latitude": 55.9328298,
+				"longitude": -3.1018496
+			}
+		},
+		{
+			"address": {
+				"city": "Edinburgh",
+				"countryCode": "GB",
+				"line1": "Unit 20, Hawkhill Avenue",
+				"postalCode": "EH7 6BU",
+				"region": "Scotland"
+			},
+			"hours": {
+				"friday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"monday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"saturday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"sunday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"thursday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"tuesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"wednesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				}
+			},
+			"id": "MGMEdiCity",
+			"name": "MGM Timber Edinburgh City",
+			"yextDisplayCoordinate": {
+				"latitude": 55.963481,
+				"longitude": -3.1649086
+			}
 		}
 	],
 	"dm_directoryParents": [
@@ -190,22 +332,32 @@
 			},
 			"name": "GB",
 			"slug": "gb"
+		},
+		{
+			"meta": {
+				"entityType": {
+					"id": "ce_region",
+					"uid": 115832
+				}
+			},
+			"name": "Scotland",
+			"slug": "scotland"
 		}
 	],
-	"id": "stores-directory_gb_scottish_highlands",
-	"key": "0:State:knowledgeGraph:41055067:en",
+	"id": "stores-directory_gb_scotland_edinburgh",
+	"key": "0:city:knowledgeGraph:41055064:en",
 	"locale": "en",
 	"meta": {
 		"entityType": {
-			"id": "ce_region",
-			"uid": 115832
+			"id": "ce_city",
+			"uid": 115830
 		},
 		"locale": "en"
 	},
-	"name": "Scottish Highlands",
+	"name": "Edinburgh",
 	"siteDomain": "",
 	"siteId": 0,
 	"siteInternalHostName": "",
-	"slug": "scottish-highlands",
-	"uid": 41055067
+	"slug": "edinburgh",
+	"uid": 41055064
 }

@@ -3,8 +3,8 @@
 		"entityPageSet": {
 			"plugin": {}
 		},
-		"name": "State",
-		"streamId": "region",
+		"name": "city",
+		"streamId": "city",
 		"templateType": "JS"
 	},
 	"_site": {
@@ -152,22 +152,84 @@
 	"businessId": 3199867,
 	"dm_directoryChildren": [
 		{
-			"dm_baseEntityCount": "1",
-			"dm_directoryChildren": [
-				{
-					"address": {
-						"city": "Inverness",
-						"countryCode": "GB",
-						"line1": "Unit F \u0026 G,24 Longman Drive",
-						"postalCode": "IV1 1SU",
-						"region": "Scottish Highlands"
-					},
-					"id": "MGMInverness",
-					"name": "MGM Timber Inverness"
+			"address": {
+				"city": "Hamilton",
+				"countryCode": "GB",
+				"line1": "12 Bairds Crescent",
+				"postalCode": "ML3 9FD",
+				"region": "Scotland"
+			},
+			"hours": {
+				"friday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"monday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"saturday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"sunday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"thursday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"tuesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
+				},
+				"wednesday": {
+					"isClosed": false,
+					"openIntervals": [
+						{
+							"end": "17:00",
+							"start": "07:00"
+						}
+					]
 				}
-			],
-			"name": "Inverness",
-			"slug": "inverness"
+			},
+			"id": "MGMHamilton",
+			"name": "MGM Timber Hamilton",
+			"yextDisplayCoordinate": {
+				"latitude": 55.7747608,
+				"longitude": -4.055238699999999
+			}
 		}
 	],
 	"dm_directoryParents": [
@@ -190,22 +252,32 @@
 			},
 			"name": "GB",
 			"slug": "gb"
+		},
+		{
+			"meta": {
+				"entityType": {
+					"id": "ce_region",
+					"uid": 115832
+				}
+			},
+			"name": "Scotland",
+			"slug": "scotland"
 		}
 	],
-	"id": "stores-directory_gb_scottish_highlands",
-	"key": "0:State:knowledgeGraph:41055067:en",
+	"id": "stores-directory_gb_scotland_hamilton",
+	"key": "0:city:knowledgeGraph:41055065:en",
 	"locale": "en",
 	"meta": {
 		"entityType": {
-			"id": "ce_region",
-			"uid": 115832
+			"id": "ce_city",
+			"uid": 115830
 		},
 		"locale": "en"
 	},
-	"name": "Scottish Highlands",
+	"name": "Hamilton",
 	"siteDomain": "",
 	"siteId": 0,
 	"siteInternalHostName": "",
-	"slug": "scottish-highlands",
-	"uid": 41055067
+	"slug": "hamilton",
+	"uid": 41055065
 }

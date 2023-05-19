@@ -288,3 +288,14 @@
 	margin-bottom: -2%;
 	margin-left: -17%;
 }
+.locator-main {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5rem;
+	width: 100%;
+	max-width: 87.5rem;
+	padding-left: 0;
+	padding-right: 0;
+	vertical-align: bottom;
+	overflow: hidden;
+}

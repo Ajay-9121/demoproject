@@ -5,7 +5,6 @@ import constant from "../constant";
 // import { stagingBaseUrl } from "../constants";
 // import bannerImage from "../images/banner.png"
 import "../index.css";
-import "../custom.css";
 var currentUrl = "";
 import {
   Template,
@@ -23,19 +22,20 @@ import { StaticData } from "../../sites-global/staticData";
 import { Addresssvg, favicon, mobilesvg, regionNames, stagingBaseurl } from "../../sites-global/global";
 import { JsonLd } from "react-schemaorg";
 import Address from "../components/commons/Address";
-import PageLayout from "../components/layouts/PageLayout";
-// import Availability from "../components/locationDetail/Availability";
+// import PageLayout from "../components/layouts/PageLayout";
 import OpenClose from "../components/commons/openClose";
 // import timesvg from "../images/watch-icn.svg";
 import { Link } from "@yext/pages/components";
-import Footer from "../components/layouts/footer";
+// import Footer1 from "../components/layouts/NewFooter";
+// import Header from "../components/layouts/NewHeader";
+// import NewHeader from "../components/layouts/NewHeader";
+// import NewFooter from "../components/layouts/NewFooter";
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
-    $id: "matlan-city",
+    $id: "city",
     filter: {
       entityTypes: ["ce_city"],
-      savedFilterIds: ["dm_stores-directory_address_city"],
     },
     fields: [
       "id",
@@ -50,6 +50,7 @@ export const config: TemplateConfig = {
       "dm_directoryChildren.slug",
       "dm_directoryChildren.name",
       "dm_directoryChildren.id",
+      //   "dm_directoryChildren.dm_directoryChildrenCount",
       "dm_directoryChildren.dm_baseEntityCount",
       "dm_directoryChildren.address",
       "dm_directoryChildren.hours",
@@ -64,15 +65,15 @@ export const config: TemplateConfig = {
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   var url: any = ""
-  document.dm_directoryParents?.map((i: any) => {
+  document?.dm_directoryParents?.map((i: any) => {
     if (i.meta.entityType.id == 'ce_country') {
       url = `${i.slug}`
     }
     else if (i.meta.entityType.id == 'ce_region') {
-      url = `${url}/${i.slug}/${document.slug.toString()}`
+      url = `${url}/${i.slug}/${document.slug.toString()}.html`
     }
   })
-  return url +".html";
+  return url;
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
@@ -80,13 +81,13 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   path,
   document,
 }): HeadConfig => {
-  var canonical="";
-   document.dm_directoryChildren?.map((entity: any) => {
-      canonical=  entity.address.countryCode.toLowerCase().replaceAll(" ", "-") + '/' +  entity.address.region.toLowerCase().replaceAll(" ", "-");
-          })
+  var canonical = "";
+  document?.dm_directoryChildren?.map((entity: any) => {
+    canonical = entity.address.countryCode.toLowerCase().replaceAll(" ", "-") + '/' + entity.address.region.toLowerCase().replaceAll(" ", "-");
+  })
 
   return {
-    title: `${document.c_meta_title?document.c_meta_title:`Independent Financial  in ${document.name} | Find a Local Independent Financial `}`,
+    title: `${document.c_meta_title ? document.c_meta_title : `Stores in ${document.name} | Find a Local Store`}`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -97,14 +98,13 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           href: favicon,
         },
       },
-        {
-          type: "meta",
-          attributes: {
-            name: "description",
-            content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Independent Financial in ${document.name} and discover the location details you need to visit us today.`}`,
-          },
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Use this page to find your nearest store in ${document.name} and discover the location details you need to visit us today.`}`,
         },
-
+      },
       //   {
       //     type: "meta",
       //     attributes: {
@@ -112,74 +112,69 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       //       content: `${document.c_metaTitle}`,
       //     },
       //   },
-        {
-          type: "meta",
-          attributes: {
-            name: "author",
-            content: StaticData.Brandname,
-          },
+      {
+        type: "meta",
+        attributes: {
+          name: "author",
+          content: StaticData.Brandname,
         },
-        {
-          type: "meta",
-          attributes: {
-            name: "keywords",
-            content: document.name,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "keywords",
+          content: document.name,
         },
-        {
-          type: "meta",
-          attributes: {
-            name: "robots",
-            content: "noindex, nofollow",
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "robots",
+          content: "noindex, nofollow",
         },
-
-        {
-          type: "link",
-          attributes: {
-            rel: "canonical",
-            href: `${
-              stagingBaseurl 
-                 ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
-                 : "/" + document.slug + ".html"
+      },
+      {
+        type: "link",
+        attributes: {
+          rel: "canonical",
+          href: `${stagingBaseurl
+            ? stagingBaseurl + canonical + "/" + document.slug + ".html"
+            : "/" + document.slug + ".html"
             }`,
-          },
         },
+      },
       //   // /og tags
-
-        {
-          type: "meta",
-          attributes: {
-            property: "og:url",
-            content: `${
-              stagingBaseurl 
-                 ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
-                 : "/" + document.slug + ".html"
+      {
+        type: "meta",
+        attributes: {
+          property: "og:url",
+          content: `${stagingBaseurl
+            ? stagingBaseurl + canonical + "/" + document.slug + ".html"
+            : "/" + document.slug + ".html"
             }`,
-          },
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:description",
-            content: `${document.c_meta_description?document.c_meta_description:`Find Independent Financial in ${document.name}. We stock high-quality, robust products at competitive rates.`}`,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Find Store in ${document.name}.`}`,
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:title",
-            content: `${document.name}`,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:title",
+          content: `${document.name}`,
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:image",
-            content: favicon,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:image",
+          content: favicon,
         },
-
+      },
       {
         type: "meta",
         attributes: {
@@ -191,15 +186,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:url",
-          content: `/${document.slug?document.slug:`${document.name.toLowerCase()}`}.html`,
+          content: `/${document.slug ? document.slug : `${document.name.toLowerCase()}`}.html`,
         },
       },
-
       {
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${document.c_meta_description?document.c_meta_description:`Find Independent Financial  in ${document.name}. We stock high-quality, robust products at competitive rates.`}`
+          content: `${document.c_meta_description ? document.c_meta_description : `Find Store in ${document.name}.`}`
         },
       },
     ],
@@ -230,19 +224,19 @@ const City: Template<TemplateRenderProps> = ({
   var instagramHandle;
   var twitterHandle;
   var c_tikTok;
-  var sortedChildren = dm_directoryChildren?.sort(function (a: any, b: any) {
+  var sortedChildren = dm_directoryChildren.sort(function (a: any, b: any) {
     var a = a.name;
     var b = b.name;
     return a < b ? -1 : a > b ? 1 : 0;
   });
 
   let slugString = "";
-  document.dm_directoryParents?.forEach((e: any) => {
+  document.dm_directoryParents.forEach((e: any) => {
     slugString += e.slug + "/";
   });
 
   const childrenDivs = dm_directoryChildren?.map((entity: any) => {
-    console.log(entity)
+    // console.log(entity)
     var origin: any = null;
     if (entity.address.city) {
       origin = entity.address.city;
@@ -262,47 +256,46 @@ const City: Template<TemplateRenderProps> = ({
     var finalcity: any = initialrcity.replaceAll(" ", "-");
     var string: any = name.toString();;
     let result: any = string.replaceAll(" ", "-");
+    // let newlink: any = 
     if (!entity.slug) {
-      url = `/${entity.id}`;
+      url = document.slug + "/" + `${result}.html`;
     } else {
-      url = `/${entity.slug.toString()}`;
+      url = `/${entity.slug.toString()}.html`;
     }
-
-
 
     return (
 
       <div className="nearby-card">
         <div className="location-name-miles icon-row">
-        {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
+          {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
                       alt="" /></div> */}
           <h2><Link className="inline-block notHighlight" href={url}
-           data-ya-track={`viewstore-${entity.name}`}
-           eventName={`viewstore-${entity.name}`}
-           rel="noopener noreferrer"
+            data-ya-track={`viewstore-${entity.name}`}
+            eventName={`viewstore-${entity.name}`}
+            rel="noopener noreferrer"
           >{entity.name}</Link></h2>
         </div>
         <div className="icon-row">
           <Address address={entity.address} />
         </div>
-        {entity.mainPhone?
-        <div className="icon-row">
-           {/* <div className="icon">
+        {entity.mainPhone ?
+          <div className="icon-row">
+            {/* <div className="icon">
            <img className=" " src={Phonesvg} width="20" height="20"
                         alt="" />
                         </div> */}
-          <div className="content-col">
-            <a href={`tel:${entity.mainPhone}`}>{entity.mainPhone}</a>
-          </div>
-        </div>:''}
-       
+            <div className="content-col">
+              <a href={`tel:${entity.mainPhone}`}>{entity.mainPhone}</a>
+            </div>
+          </div> : ''}
+
         <div className="icon-row">
           <div className="content-col open-now-string">
-           
-            {typeof entity.hours?.reopenDate!="undefined"?
-            <h6>{StaticData.tempClosed}</h6>
-          :<OpenClose timezone={entity.timezone} hours={entity.hours}/>}
-           
+
+            {typeof entity.hours?.reopenDate != "undefined" ?
+              <h6>{StaticData.tempClosed}</h6>
+              : <OpenClose timezone={entity.timezone} hours={entity.hours} />}
+
           </div>
         </div>
         {/* <div className="icon-row content-col availability-col">
@@ -312,21 +305,17 @@ const City: Template<TemplateRenderProps> = ({
            c_parking_facilities={entity.c_parking_facilities} c_fitting_rooms={entity.c_fitting_rooms}
             hours={entity.hours} />
         </div> */}
-
-
-
         <div className="button-bx">
           <Link className="btn" href={url}
-           data-ya-track={`viewstore-${entity.name}`}
-           eventName={`viewstore-${entity.name}`}
-           rel="noopener noreferrer"
+            data-ya-track={`viewstore-${entity.name}`}
+            eventName={`viewstore-${entity.name}`}
+            rel="noopener noreferrer"
           >
-
             {StaticData.StoreDetailbtn}</Link>
           <GetDirection buttonText={StaticData.getDirection} address={entity.address} latitude={entity.yextDisplayCoordinate.latitude} longitude={entity.yextDisplayCoordinate.longitude} />
         </div>
       </div>
-  );
+    );
   });
   function getDirectionUrl(entitiy: any) {
     var origin: any = null;
@@ -386,22 +375,10 @@ const City: Template<TemplateRenderProps> = ({
       );
     }
   }
-  c_globalData &&
-    c_globalData?.map((i: any) => {
-      address = i.address ? i.address : [];
-      c_companyrn = i.c_companyrn ? i.c_companyrn : "";
-      c_footerLinks = i.c_footerLinks ? i.c_footerLinks : [];
-      c_headerLinks1 = i.c_headerLinks1 ? i.c_headerLinks1 : [];
-      c_phoneNumber = i.phoneNumber ? i.phoneNumber : "";
-      facebookPageUrl = i.facebookPageUrl ? i.facebookPageUrl : "";
-      instagramHandle = i.instagramHandle ? i.instagramHandle : "";
-      twitterHandle = i.twitterHandle ? i.twitterHandle : "";
-      c_tikTok = i.c_tikTok ? i.c_tikTok : "";
-    });
 
   var url: any = ""
 
-  document.dm_directoryParents?.map((i: any) => {
+  document.dm_directoryParents.map((i: any) => {
     if (i.meta.entityType.id == 'ce_country') {
       url = `${i.slug}`
     }
@@ -453,28 +430,27 @@ const City: Template<TemplateRenderProps> = ({
           itemListElement: breadcrumbScheme,
         }}
       />
-      <PageLayout  _site={_site} global={undefined}>
-        <BreadCrumbs
-          name={name}
-          address={address}
-          parents={dm_directoryParents}
-          baseUrl={relativePrefixToRoot}
-        ></BreadCrumbs>
+      {/* <NewHeader prop={_site} /> */}
+      <BreadCrumbs
+        name={name}
+        address={address}
+        parents={dm_directoryParents}
+        baseUrl={relativePrefixToRoot}
+      ></BreadCrumbs>
 
-        <div className="content-list city-page">
-          <div className="container mx-auto">
-            <div className="sec-title">
-              <h2>
-              Independent Financial  in {name}
-              </h2>
-            </div>
-            <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">
-              {childrenDivs}
-            </div>
+      <div className="content-list city-page">
+        <div className="container mx-auto">
+          <div className="sec-title">
+            <h2>
+              Eye Glass World Stores in {name}
+            </h2>
+          </div>
+          <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">
+            {childrenDivs}
           </div>
         </div>
-      </PageLayout>
-      {/* <Footer footer={_site} /> */}
+      </div>
+      {/* <NewFooter prop={_site} /> */}
     </>
   );
 };

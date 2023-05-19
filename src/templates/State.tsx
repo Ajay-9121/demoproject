@@ -16,7 +16,10 @@ import Banner from "../components/locationDetail/banner";
 import PageLayout from "../components/layouts/PageLayout";
 import { favicon, stagingBaseurl } from "../../sites-global/global";
 import { StaticData } from "../../sites-global/staticData";
-import "../custom.css";
+import Footer1 from "../components/layouts/NewFooter";
+import Header from "../components/layouts/NewHeader";
+import NewFooter from "../components/layouts/NewFooter";
+import NewHeader from "../components/layouts/NewHeader";
 
 
 
@@ -37,12 +40,12 @@ export const config: TemplateConfig = {
       "slug",
       "dm_directoryParents.name",
       "dm_directoryParents.slug",
-      "dm_directoryParents.dm_baseEntityCount",
+      //   "dm_directoryParents.dm_directoryChildrenCount",
       "dm_directoryParents.meta.entityType",
       "dm_directoryChildren.name",
       "dm_directoryChildren.address",
       "dm_directoryChildren.slug",
-      // "dm_directoryChildren.dm_baseEntityCount",
+      //   "dm_directoryChildren.dm_directoryChildrenCount",
       "dm_directoryChildren.dm_baseEntityCount",
       "dm_directoryChildren.dm_directoryChildren.name",
       "dm_directoryChildren.dm_directoryChildren.id",
@@ -52,7 +55,7 @@ export const config: TemplateConfig = {
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityTypes: ["ce_region"],
-      // savedFilterIds: ["dm_matalan-stores-directory_address_region"]
+      savedFilterIds: ["dm_stores-directory_address_region"]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -75,26 +78,25 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return url + '.html';
 };
 
-
-// export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-//   return [`index-old/${document.id.toString()}`];
-// };
-
+export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
+  // return [`index-old/${document.id.toString()}`];
+  return [`index-old/${document.locale + "/" + document.name}`];
+};
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   relativePrefixToRoot,
   path,
   document,
 }): HeadConfig => {
-  var canonical="";
+  var canonical = "";
   document.dm_directoryParents.map((entity: any) => {
-    
-      canonical=entity.slug.toLowerCase();
-    })
-   
-   
+
+    canonical = entity.slug.toLowerCase();
+  })
+
+
   return {
-    title: `${document.c_meta_title?document.c_meta_title:`MGM Stores in ${document.name} | Find a Local Store`}`,
+    title: `${document.c_meta_title ? document.c_meta_title : `Stores in ${document.name} | Find a Local Store`}`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -105,13 +107,13 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           href: favicon,
         },
       },
-        {
-          type: "meta",
-          attributes: {
-            name: "description",
-            content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest MGM store in ${document.name} and discover the location details you need to visit us today.`}`,
-          },
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Use this page to find your nearest store in ${document.name} and discover the location details you need to visit us today.`}`,
         },
+      },
 
       //   {
       //     type: "meta",
@@ -120,73 +122,72 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       //       content: `${document.c_metaTitle}`,
       //     },
       //   },
-        {
-          type: "meta",
-          attributes: {
-            name: "author",
-            content: StaticData.Brandname,
-          },
+      {
+        type: "meta",
+        attributes: {
+          name: "author",
+          content: StaticData.Brandname,
         },
-        {
-          type: "meta",
-          attributes: {
-            name: "keywords",
-            content: document.name,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "keywords",
+          content: document.name,
         },
-        {
-          type: "meta",
-          attributes: {
-            name: "robots",
-            content: "noindex, nofollow",
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "robots",
+          content: "noindex, nofollow",
         },
+      },
 
-        {
-          type: "link",
-          attributes: {
-            rel: "canonical",
-            href: `${
-             stagingBaseurl
-                 ? stagingBaseurl+ canonical + "/" + document.slug + ".html"
-                 : "/" + document.slug + ".html"
-            }`,
-          },
-        },
+      // {
+      //   type: "link",
+      //   attributes: {
+      //     rel: "canonical",
+      //     href: `${
+      //      stagingBaseurl
+      //          ? stagingBaseurl+ canonical + "/" + document.slug + ".html"
+      //          : "/" + document.slug + ".html"
+      //     }`,
+      //   },
+      // },
       //   // /og tags
 
-        {
-          type: "meta",
-          attributes: {
-            property: "og:url",
-            content:`${
-              stagingBaseurl
-                  ? stagingBaseurl+ canonical + "/" + document.slug + ".html"
-                  : "/" + document.slug + ".html"
-             }`,
-          },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:url",
+          content: `${stagingBaseurl
+            ? stagingBaseurl + canonical + "/" + document.slug + ".html"
+            : "/" + document.slug + ".html"
+            }`,
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:description",
-            content: `${document.c_meta_description?document.c_meta_description:`Find MGM Timber Store in ${document.name}. We stock high-quality, robust products at competitive rates.`}`,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Find  Store in ${document.name}.`}`,
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:title",
-            content: `${document.name}`,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:title",
+          content: `${document.name}`,
         },
-        {
-          type: "meta",
-          attributes: {
-            property: "og:image",
-            content: favicon,
-          },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:image",
+          content: favicon,
         },
+      },
 
       {
         type: "meta",
@@ -199,7 +200,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:url",
-          content: `/${document.slug?document.slug:`${document.name.toLowerCase()}`}.html`,
+          content: `/${document.slug ? document.slug : `${document.name.toLowerCase()}`}.html`,
         },
       },
 
@@ -207,7 +208,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${document.c_meta_description?document.c_meta_description:`Find MGM Timber Store in ${document.name}. We stock high-quality, robust products at competitive rates.`}`
+          content: `${document.c_meta_description ? document.c_meta_description : `Find Store in ${document.name}.`}`
         },
       },
     ],
@@ -229,78 +230,81 @@ const region: Template<TemplateRenderProps> = ({
     dm_directoryParents,
     dm_directoryChildren
   } = document;
-  const childrenDivs = dm_directoryChildren ? dm_directoryChildren.map((entity: any) => {
-    let detlslug;
-
-
-    if (typeof entity.dm_directoryChildren != "undefined") {
-
-      if (entity.dm_baseEntityCount == 1) {
-        entity.dm_directoryChildren.map((res: any) => {
-         console.log(res,"res")
-          let detlslug1 = "";
-
-          if (!res.slug) {
-            let slugString = res.id + "-" + res.name.toLowerCase();
-            let slug = slugString;
-            detlslug1 = `${slug}.html`;
-          } else {
-            detlslug1 = `${res.slug.toString()}.html`;
-          }
-
-          detlslug = detlslug1;
-
+  let newurl = "";
+  //   const links=document?.slug+"/"+document?.dm_directoryChildren?.slug;
+  // console.log('links', links)
+  const childrenDivs =
+    dm_directoryChildren &&
+    dm_directoryChildren?.map((entity: any) => {
+      if (entity?.dm_baseEntityCount == 1) {
+        newurl = entity.slug;
+        entity.dm_directoryChildren.map((detl: any) => {
+          var string: any = detl.name.toString();
+          // let result: any = string.replaceAll(" ", "-");
+          newurl = slug + "/" + newurl + "/" + string.toLowerCase().replaceAll(" ", "-") + ".html";
+          //  console.log(newurl,"575524")
         })
+        // let slugs =
+        //   links+"/" + entity?.dm_directoryChildren[0]?.name.toLowerCase() + ".html";
+        // let slug: any = slugs.replaceAll(" ", "-");
+        return (
+          <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
+            <a key={entity.slug} href={newurl} className="hover:text-red">
+              {entity.name} ({entity.dm_baseEntityCount})
+            </a>
+          </div>
+        );
       } else {
-        detlslug = "gb/" + slug + "/" + entity.slug + ".html";
+        // console.log(dm_directoryParents&&dm_directoryParents[1]&&dm_directoryParents[1].slug,'jghhfhhhjhhhhh')
+        let slug =
+          "/" +
+          dm_directoryParents[1]?.slug +
+          "/" +
+          document.slug +
+          "/" +
+          entity.slug +
+          ".html";
+        return (
+          <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4 test">
+            <a key={entity.slug} href={slug} className="hover:text-red">
+              {entity.name} ({entity.dm_baseEntityCount})
+            </a>
+          </div>
+        );
       }
+    });
 
-    }
 
-    return (
-      <li className=" storelocation-category">
-        <a
-          key={entity.slug}
-          href={stagingBaseurl  + detlslug}
-        >
-          {entity.name} ({entity.dm_baseEntityCount})
-        </a>
-      </li>
-    )
-  }) : null;
 
- 
-
-  let bannerimage = c_banner_image && c_banner_image.image.url;
+  // let bannerimage = c_banner_image && c_banner_image.image.url;
   return (
     <>
-        <PageLayout _site={_site} global={undefined}>
-        <BreadCrumbs
-            name={name}
-            parents={dm_directoryParents}
-            baseUrl={relativePrefixToRoot}
-            address={address}
-          ></BreadCrumbs>
-          {/* <div className="location-dtl">     <Banner name={c_bannerHeading?c_bannerHeading:name} c_bannerImage={bannerimage}  /></div> */}
-          
+      {/* <NewHeader prop={_site} /> */}
+      <BreadCrumbs
+        name={name}
+        parents={dm_directoryParents}
+        baseUrl={relativePrefixToRoot}
+        address={address}
+      ></BreadCrumbs>
+      {/* <div className="location-dtl">     <Banner name={c_bannerHeading?c_bannerHeading:name} c_bannerImage={bannerimage}  /></div> */}
 
-          <div className="content-list">
-            <div className="container">
-            <div className="sec-title">
-                <h2 style={{ textAlign: "center" }}>
+      <div className="content-list">
+        <div className="container">
+          <div className="sec-title">
+            <h2 style={{ textAlign: "center" }}>
               {name}
-                </h2>
-              </div>
-              <ul className="region-list">
-
-                {childrenDivs}
-              </ul>
-
-            </div>
+            </h2>
           </div>
+          <ul className="region-list">
 
-          
-        </PageLayout>
+            {childrenDivs}
+          </ul>
+
+        </div>
+      </div>
+
+
+      {/* <NewFooter prop={_site} /> */}
     </>
   )
 }

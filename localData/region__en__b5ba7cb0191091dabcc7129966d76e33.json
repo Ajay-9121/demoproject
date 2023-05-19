@@ -381,7 +381,6 @@
 	],
 	"dm_directoryParents": [
 		{
-			"dm_baseEntityCount": "14",
 			"meta": {
 				"entityType": {
 					"id": "ce_root",
@@ -392,7 +391,6 @@
 			"slug": "stores"
 		},
 		{
-			"dm_baseEntityCount": "14",
 			"meta": {
 				"entityType": {
 					"id": "ce_country",

@@ -3,8 +3,8 @@
 		"entityPageSet": {
 			"plugin": {}
 		},
-		"name": "State",
-		"streamId": "region",
+		"name": "country",
+		"streamId": "country",
 		"templateType": "JS"
 	},
 	"_site": {
@@ -152,22 +152,138 @@
 	"businessId": 3199867,
 	"dm_directoryChildren": [
 		{
+			"dm_baseEntityCount": "13",
+			"dm_directoryChildren": [
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Edinburgh"
+						},
+						{
+							"name": "MGM Timber Edinburgh City"
+						}
+					],
+					"name": "Edinburgh",
+					"slug": "edinburgh"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Hamilton"
+						}
+					],
+					"name": "Hamilton",
+					"slug": "hamilton"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Paisley"
+						}
+					],
+					"name": "Paisley",
+					"slug": "paisley"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Dunfermline"
+						}
+					],
+					"name": "Dunfermline",
+					"slug": "dunfermline"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Perth"
+						}
+					],
+					"name": "Perth",
+					"slug": "perth"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Grangemouth"
+						}
+					],
+					"name": "Grangemouth",
+					"slug": "grangemouth"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Wishaw"
+						}
+					],
+					"name": "Wishaw",
+					"slug": "wishaw"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Glenrothes"
+						}
+					],
+					"name": "Glenrothes",
+					"slug": "glenrothes"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Dundee"
+						}
+					],
+					"name": "Dundee",
+					"slug": "dundee"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Prestwick"
+						}
+					],
+					"name": "Prestwick",
+					"slug": "prestwick"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Glasgow"
+						}
+					],
+					"name": "Glasgow",
+					"slug": "glasgow"
+				},
+				{
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Broxburn"
+						}
+					],
+					"name": "Broxburn",
+					"slug": "broxburn"
+				}
+			],
+			"name": "Scotland",
+			"slug": "scotland"
+		},
+		{
 			"dm_baseEntityCount": "1",
 			"dm_directoryChildren": [
 				{
-					"address": {
-						"city": "Inverness",
-						"countryCode": "GB",
-						"line1": "Unit F \u0026 G,24 Longman Drive",
-						"postalCode": "IV1 1SU",
-						"region": "Scottish Highlands"
-					},
-					"id": "MGMInverness",
-					"name": "MGM Timber Inverness"
+					"dm_directoryChildren": [
+						{
+							"name": "MGM Timber Inverness"
+						}
+					],
+					"name": "Inverness",
+					"slug": "inverness"
 				}
 			],
-			"name": "Inverness",
-			"slug": "inverness"
+			"name": "Scottish Highlands",
+			"slug": "scottish-highlands"
 		}
 	],
 	"dm_directoryParents": [
@@ -180,32 +296,22 @@
 			},
 			"name": "stores Directory",
 			"slug": "stores"
-		},
-		{
-			"meta": {
-				"entityType": {
-					"id": "ce_country",
-					"uid": 115831
-				}
-			},
-			"name": "GB",
-			"slug": "gb"
 		}
 	],
-	"id": "stores-directory_gb_scottish_highlands",
-	"key": "0:State:knowledgeGraph:41055067:en",
+	"id": "stores-directory_gb",
+	"key": "0:country:knowledgeGraph:41055062:en",
 	"locale": "en",
 	"meta": {
 		"entityType": {
-			"id": "ce_region",
-			"uid": 115832
+			"id": "ce_country",
+			"uid": 115831
 		},
 		"locale": "en"
 	},
-	"name": "Scottish Highlands",
+	"name": "GB",
 	"siteDomain": "",
 	"siteId": 0,
 	"siteInternalHostName": "",
-	"slug": "scottish-highlands",
-	"uid": 41055067
+	"slug": "gb",
+	"uid": 41055062
 }
