@@ -225,6 +225,7 @@
 				}
 			},
 			"id": "MGMEdinburgh",
+			"mainPhone": "+441382817738",
 			"name": "MGM Timber Edinburgh",
 			"yextDisplayCoordinate": {
 				"latitude": 55.9328298,
@@ -305,6 +306,7 @@
 				}
 			},
 			"id": "MGMEdiCity",
+			"mainPhone": "+441382817738",
 			"name": "MGM Timber Edinburgh City",
 			"yextDisplayCoordinate": {
 				"latitude": 55.963481,

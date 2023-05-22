@@ -346,6 +346,7 @@
 	"id": "MGMGrangemouth",
 	"key": "0:location:knowledgeGraph:40802686:en",
 	"locale": "en",
+	"mainPhone": "+441382817738",
 	"meta": {
 		"entityType": {
 			"id": "location",

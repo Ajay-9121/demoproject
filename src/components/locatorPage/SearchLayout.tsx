@@ -80,8 +80,8 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
       );
     }
     params1 = {
-      latitude: 54.9191,
-      longitude: -1.3692,
+      latitude: 55.9533,
+      longitude: -3.1883,
     };
     SetNewparam(params1);
     // mapzoom=8;
@@ -283,7 +283,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
                     entityType: "location",
                     fieldApiName: "name",
 
-                }
+                },
                 
                   // {
                   //   entityType: "location",

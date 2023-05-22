@@ -4,9 +4,9 @@ import { regionNames } from "../../../sites-global/global";
 const Address = (props: any) => {
     const { address } = props;
     var gmaps = "https://www.google.com/maps/dir/?api=1&destination=";
-    var gmapsAddress = gmaps.concat(address.line1, ' ', address.city, ' ', address.region, ' ', address.postalCode);
+    var gmapsAddress = gmaps.concat(address.line1, ' ', address.city, ' ', address.region, ' ', address.postalCode,' ',address.mainPhone);
     var gmapsLink = gmapsAddress.concat('"');
-
+console.log(address)
   return (
     <>
       <div className="address notHighlight ">
@@ -15,6 +15,7 @@ const Address = (props: any) => {
             {address.line2 && (<div><span className="notHighlight">{address.line2}</span></div>)}
             <div ><span className="notHighlight">{address.city}, {address.region}</span> </div>
             {<div ><span className="notHighlight">{address.postalCode}, {regionNames.of(address.countryCode)}</span></div>}
+           
         {/* </a> */}
       </div>
     </>

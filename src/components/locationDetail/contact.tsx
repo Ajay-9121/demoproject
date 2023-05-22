@@ -39,6 +39,7 @@ const Contact = (props: any) => {
             <div>{address.line2 && <div>{address.line2}</div>}</div>
             <div>{address.city}</div>
             <div>{address.postalCode}</div>
+            <div>{address.mainPhone}</div>
           </div>
         </div>
 

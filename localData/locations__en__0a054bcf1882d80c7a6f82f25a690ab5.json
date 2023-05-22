@@ -346,6 +346,7 @@
 	"id": "MGMPaisley",
 	"key": "0:location:knowledgeGraph:40802682:en",
 	"locale": "en",
+	"mainPhone": "+441382817738",
 	"meta": {
 		"entityType": {
 			"id": "location",

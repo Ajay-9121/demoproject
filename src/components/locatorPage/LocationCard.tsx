@@ -77,6 +77,7 @@ function opentime(e: any) {
             
             <div className="icon-row content-col address-with-availablity notHighlight">
               <Address address={address} />
+              {result.rawData.mainPhone}
               {result.rawData.hours ? <>
               <div className="mt-2">
               {/* <h6>Opening Hours</h6> */}
