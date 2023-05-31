@@ -71,9 +71,12 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
     }
     else if (i.meta.entityType.id == 'ce_region') {
       url = `${url}/${i.slug}/${document.slug.toString()}.html`
+  
     }
   })
+
   return url;
+  
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
@@ -259,10 +262,10 @@ const City: Template<TemplateRenderProps> = ({
     // let newlink: any = 
     if (!entity.slug) {
       url = document.slug + "/" + `${result}.html`;
-      console.log(url)
+      console.log(url,"ajjju")
     } else {
-      url = `/${entity.slug.toString()}.html`;
-      
+      url = `/${entity.id.toString()}.html`;
+     console.log(url,"sdkghskjghsdfkjfhkldsfbklsdj")
     }
 
     return (

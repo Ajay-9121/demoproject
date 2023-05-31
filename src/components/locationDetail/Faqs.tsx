@@ -7,11 +7,11 @@ import { StaticData } from "../../../sites-global/staticData";
 
 
 export default function Faq(props: any) {
-  const [current, setCurrent] = useState("");
+  const [current, setCurrent] = useState(0);
   const [isShow, setIsShow] = useState(false);
   const [faqId, setFaqId] = useState(null);
   const [faqClass, setFaqClass] = useState("");
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState();
   let preExpandedarr = [];
 
   if (props.c_faq.length > 0) {
@@ -26,7 +26,7 @@ export default function Faq(props: any) {
 
     if (isShow) {
       setIsShow(false);
-      setFaqClass("");
+      setFaqClass("hide");
     } else {
       setIsShow(true);
       setFaqClass("opened");
