@@ -185,7 +185,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
  
 
   // const loader =
-  //   isLoading ? <LoadingSpinner /> : '';
+    // isLoading ? <LoadingSpinner /> : '';
 
   const addClass = () => {
 
@@ -201,7 +201,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
     }
     },[locationinbuit])
     useEffect(()=>{
-      console.log("yes rerender")
+      // console.log("yes rerender")
       locationResults.map((result:any, index:number) => {
         const resultelement = document.querySelectorAll(
           `.result-list-inner-${index + 1}`
@@ -269,27 +269,30 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
               params={params1}
               searchOnSelect={true}
               searchFields={[
+               
                 {
                   entityType: "location",
-                  fieldApiName: "address.line1",
+                  fieldApiName: "name",
 
-                },
+                },            
                 {
                   entityType: "location",
                   fieldApiName: "address.postalCode",
 
-                  },
-                  {
-                    entityType: "location",
-                    fieldApiName: "name",
+                },             
+                {
+                  entityType: "location",
+                  fieldApiName: "address.city",
 
                 },
-                
-                  // {
-                  //   entityType: "location",
-                  //   fieldApiName: "address.countryCode",
-
-                  // },
+                // {
+                //   entityType: "location",
+                //   fieldApiName: "address.region",
+                // },           
+                {
+                  entityType: "location",
+                  fieldApiName: "address.countryCode",
+                },          
                 ]}
                 
                 handleInputValue={handleInputValue}  

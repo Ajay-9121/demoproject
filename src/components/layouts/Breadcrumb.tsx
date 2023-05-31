@@ -78,7 +78,7 @@ const BreadCrumbs = (props: data) => {
       setList(null);
     }
   };
-  console.log('Prem',props.baseUrl);
+  console.log('ajju',props.baseUrl);
   return (
     <div className="breadcrumb">
       <div className="container mx-auto">

@@ -169,6 +169,17 @@
 						}
 					]
 				},
+				"holidayHours": [
+					{
+						"date": "2023-05-31",
+						"openIntervals": [
+							{
+								"end": "17:00",
+								"start": "07:00"
+							}
+						]
+					}
+				],
 				"monday": {
 					"isClosed": false,
 					"openIntervals": [
@@ -279,6 +290,6 @@
 	"siteDomain": "",
 	"siteId": 0,
 	"siteInternalHostName": "",
-	"slug": "dundee",
+	"slug": "stores-directory_gb_scotland_dundee",
 	"uid": 41055074
 }

@@ -164,7 +164,7 @@
 						}
 					],
 					"name": "Edinburgh",
-					"slug": "edinburgh"
+					"slug": "stores-directory_gb_scotland_edinburgh"
 				},
 				{
 					"dm_directoryChildren": [
@@ -173,7 +173,7 @@
 						}
 					],
 					"name": "Hamilton",
-					"slug": "hamilton"
+					"slug": "stores-directory_gb_scotland_hamilton"
 				},
 				{
 					"dm_directoryChildren": [
@@ -182,7 +182,7 @@
 						}
 					],
 					"name": "Paisley",
-					"slug": "paisley"
+					"slug": "stores-directory_gb_scotland_paisley"
 				},
 				{
 					"dm_directoryChildren": [
@@ -191,7 +191,7 @@
 						}
 					],
 					"name": "Dunfermline",
-					"slug": "dunfermline"
+					"slug": "stores-directory_gb_scotland_dunfermline"
 				},
 				{
 					"dm_directoryChildren": [
@@ -200,7 +200,7 @@
 						}
 					],
 					"name": "Perth",
-					"slug": "perth"
+					"slug": "stores-directory_gb_scotland_perth"
 				},
 				{
 					"dm_directoryChildren": [
@@ -209,7 +209,7 @@
 						}
 					],
 					"name": "Grangemouth",
-					"slug": "grangemouth"
+					"slug": "stores-directory_gb_scotland_grangemouth"
 				},
 				{
 					"dm_directoryChildren": [
@@ -218,7 +218,7 @@
 						}
 					],
 					"name": "Wishaw",
-					"slug": "wishaw"
+					"slug": "stores-directory_gb_scotland_wishaw"
 				},
 				{
 					"dm_directoryChildren": [
@@ -227,7 +227,7 @@
 						}
 					],
 					"name": "Glenrothes",
-					"slug": "glenrothes"
+					"slug": "stores-directory_gb_scotland_glenrothes"
 				},
 				{
 					"dm_directoryChildren": [
@@ -236,7 +236,7 @@
 						}
 					],
 					"name": "Dundee",
-					"slug": "dundee"
+					"slug": "stores-directory_gb_scotland_dundee"
 				},
 				{
 					"dm_directoryChildren": [
@@ -245,7 +245,7 @@
 						}
 					],
 					"name": "Prestwick",
-					"slug": "prestwick"
+					"slug": "stores-directory_gb_scotland_prestwick"
 				},
 				{
 					"dm_directoryChildren": [
@@ -254,7 +254,7 @@
 						}
 					],
 					"name": "Glasgow",
-					"slug": "glasgow"
+					"slug": "stores-directory_gb_scotland_glasgow"
 				},
 				{
 					"dm_directoryChildren": [
@@ -263,7 +263,7 @@
 						}
 					],
 					"name": "Broxburn",
-					"slug": "broxburn"
+					"slug": "stores-directory_gb_scotland_broxburn"
 				}
 			],
 			"name": "Scotland",
@@ -279,7 +279,7 @@
 						}
 					],
 					"name": "Inverness",
-					"slug": "inverness"
+					"slug": "stores-directory_gb_scottish_highlands_inverness"
 				}
 			],
 			"name": "Scottish Highlands",

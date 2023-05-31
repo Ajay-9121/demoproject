@@ -300,7 +300,8 @@ function UnwrappedGoogleMaps({
           map.fitBounds(bounds);
         }
       }, 1000);
-    } else if (hover) {
+    } 
+    else if (hover) {
       map?.setZoom(zoom);
       if (zoom > 4) {
       }
@@ -516,16 +517,7 @@ function UnwrappedGoogleMaps({
               ""
             )}
           </div>
-          {/* {result.rawData.mainPhone?
-    <div className="icon-row">
-      <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
-      </div>
-      <div className="content-col">
-        <h6>Telephone</h6>
-        <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
-          {result.rawData.mainPhone}</a>
-      </div>
-    </div>:''} */}
+         
 
           {result.rawData.hours && result.rawData.hours.reopenDate ? (
             ""
@@ -559,6 +551,16 @@ function UnwrappedGoogleMaps({
               </div>
             </div>
           )}
+           {result.rawData.mainPhone?
+    <div className="icon-row">
+      <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
+      </div>
+      <div className="content-col">
+        {/* <h6>Telephone</h6> */}
+        <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
+          {result.rawData.mainPhone}</a>
+      </div>
+    </div>:''}
         </div>
         <div className="button-bx !ml-4 !mb-0">
           <a type="button" href={`/${result.rawData.id}`} className="btn">

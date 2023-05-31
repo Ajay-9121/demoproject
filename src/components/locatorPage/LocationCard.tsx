@@ -3,11 +3,12 @@ import { CardComponent } from "@yext/search-ui-react";
 import { Location } from "../../types/search/locations";
 import GetDirection from "../commons/GetDirection";
 import redmapimage from "../../images/red-map.svg";
-import timesvg from "../../images/watch-icn.svg"
+import timesvg from "../../images/watch-icn.svg";
 import Address from "../commons/Address";
 import OpenClose from "../commons/openClose";
 import { StaticData } from "../../../sites-global/staticData";
 import { Link } from "@yext/pages/components";
+import Phonesvg from "../../images/phone.svg";
 
 
 const metersToMiles = (meters: number) => {
@@ -77,7 +78,7 @@ function opentime(e: any) {
             
             <div className="icon-row content-col address-with-availablity notHighlight">
               <Address address={address} />
-              {result.rawData.mainPhone}
+             
               {result.rawData.hours ? <>
               <div className="mt-2">
               {/* <h6>Opening Hours</h6> */}
@@ -99,7 +100,18 @@ function opentime(e: any) {
                      <Hours key={result.rawData.name} additionalHoursText={result.rawData.additionalHoursText} hours={result.rawData.hours} c_specific_day={result.rawData.c_specific_day} />
                    :''}
                 </div> */}
-              </div></> : <div className="closeddot notHighlight red-dot">
+              </div>
+              {result.rawData.mainPhone?
+    <div className="icon-row">
+      <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
+      </div>
+      <div className="content-col">
+        {/* <h6>Telephone</h6> */}
+        <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
+          {result.rawData.mainPhone}</a>
+      </div>
+    </div>:''}
+              </> : <div className="closeddot notHighlight red-dot">
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
            <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" fill="#ad1e1f"/>
          </svg>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import gallerybg from "../../images/faq-bg.png"
+// import gallerybg from "../../images/faq-bg.png"
 
 import { useState, useEffect } from "react";
 import AccordionItem from "./AccordianItem";
@@ -14,8 +14,8 @@ export default function Faq(props: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   let preExpandedarr = [];
 
-  if (props.faqs.length > 0) {
-    props.faqs.map((e: any, i: Number) => {
+  if (props.c_faq.length > 0) {
+    props.c_faq.map((e: any, i: Number) => {
       if (i == 0) {
         preExpandedarr = [e];
       }
@@ -35,7 +35,7 @@ export default function Faq(props: any) {
   function setclass(e: any) {
     setCurrent(e.target.id);
   }
-  const renderedQuestionsAnswers = props.faqs.map((item: any, index: Number) => {
+  const renderedQuestionsAnswers = props.c_faq.map((item: any, index: Number) => {
     const showDescription = index === activeIndex ? "current" : "hidden";
     const background = index === activeIndex ? "active" : "";
     const fontWeightBold = index === activeIndex ? " font-weight-bold  py-0 mt-2" : "";

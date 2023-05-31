@@ -173,6 +173,16 @@
 			"linkType": "OTHER"
 		}
 	},
+	"c_faq": [
+		{
+			"answer": "*\"Synonyms are two or more words which have the same meaning.\"*",
+			"question": "What are Synonyms"
+		},
+		{
+			"answer": "For a single query, we take each word, and every combination of sequential words, and check if a synonym exists for that phrase. Using the synonyms that are defined in the backend configuration, the algorithm produces \"expanded\" versions of the query \\- e.g., replacing the parts of the query with matching synonyms.  \nExample:Original Search Term: \"Career information\"  \nSynonyms: \"career\" → \"Job\",  \nExpanded Search Terms:\"Career information\"  \n\"Job information\"",
+			"question": "How Synonyms Work?"
+		}
+	],
 	"c_slider": {
 		"featuredBrands": "Featured Brands",
 		"logo": [
@@ -275,7 +285,7 @@
 				}
 			},
 			"name": "Hamilton",
-			"slug": "hamilton"
+			"slug": "stores-directory_gb_scotland_hamilton"
 		}
 	],
 	"hours": {

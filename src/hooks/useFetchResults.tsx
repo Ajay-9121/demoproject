@@ -51,7 +51,7 @@ const useFetchResults = () => {
   }
     
   let mapLocationsResults = mapLocations;  
-  // console.log('mapLocationsResults',mapLocationsResults);
+  console.log('mapLocationsResults',mapLocationsResults);
   return mapLocationsResults;
 };
 
