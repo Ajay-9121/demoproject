@@ -259,8 +259,10 @@ const City: Template<TemplateRenderProps> = ({
     // let newlink: any = 
     if (!entity.slug) {
       url = document.slug + "/" + `${result}.html`;
+      console.log(url)
     } else {
       url = `/${entity.slug.toString()}.html`;
+      
     }
 
     return (
@@ -442,7 +444,7 @@ const City: Template<TemplateRenderProps> = ({
         <div className="container mx-auto">
           <div className="sec-title">
             <h2>
-              Eye Glass World Stores in {name}
+            MGM Timber {name}
             </h2>
           </div>
           <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">

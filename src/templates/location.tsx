@@ -79,6 +79,8 @@ export const config: TemplateConfig = {
       "dm_directoryParents.slug",
       "dm_directoryParents.dm_baseEntityCount",
       "dm_directoryParents.meta.entityType",
+      "c_faq.question",
+      "c_faq.answer",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -287,6 +289,7 @@ const Location: Template<ExternalApiRenderData> = ({
     c_slider,
     dm_directoryParents,
     name,
+    c_faq
    
   } = document;
 
@@ -519,6 +522,7 @@ breadcrumbScheme.push({
           </div>
           
         </div>
+        <Faq c_faq={c_faq}/>
 
           {/* slider section */}
           {/* <PhotoSlider c_slider={c_slider}/> */}
