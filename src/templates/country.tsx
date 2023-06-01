@@ -204,6 +204,7 @@ const country: Template<TemplateRenderProps> = ({
             detlslug1 = `${slug}.html`;
           } else {
             detlslug1 = `${res.slug.toString()}.html`;
+            console.log(detlslug1,"singlrdetaila")
           }
 
           res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
