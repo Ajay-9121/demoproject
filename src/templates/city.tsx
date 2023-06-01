@@ -247,8 +247,7 @@ const City: Template<TemplateRenderProps> = ({
     }
     // let key: any = Object.keys(entity.hours)[0];
     var url = "";
-    var cityurl="";
-    var name: any = entity.name.toLowerCase();
+    var name: any = entity.id.toLowerCase();
     var region: any = entity.address.region.toLowerCase();
     var initialregion: any = region.toString();
     var finalregion: any = initialregion.replaceAll(" ", "-");
@@ -259,11 +258,10 @@ const City: Template<TemplateRenderProps> = ({
     let result: any = string.replaceAll(" ", "-");
     // let newlink: any = 
     if (!entity.slug) {
-      url = `/${result}.html`;
-console.log(url,"sdfghsdlfgdhkjl")
+      url = document.slug + "/" + `${result}.html`;
     } else {
-      cityurl = `/${entity.slug.toString()}.html`;
-      console.log(cityurl,"city url")
+      url = `/${entity.slug.toString()}.html`;
+      console.log(url,"city url")
     }
 
     return (
@@ -272,7 +270,7 @@ console.log(url,"sdfghsdlfgdhkjl")
         <div className="location-name-miles icon-row">
           {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
                       alt="" /></div> */}
-          <h2><Link className="inline-block notHighlight" href={cityurl}
+          <h2><Link className="inline-block notHighlight" href={url}
             data-ya-track={`viewstore-${entity.name}`}
             eventName={`viewstore-${entity.name}`}
             rel="noopener noreferrer"

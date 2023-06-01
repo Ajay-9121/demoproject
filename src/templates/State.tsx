@@ -237,11 +237,11 @@ const region: Template<TemplateRenderProps> = ({
     dm_directoryChildren &&
     dm_directoryChildren?.map((entity: any) => {
       if (entity?.dm_baseEntityCount == 1) {
-        newurl = entity.slug;
+        newurl = entity.id;
         entity.dm_directoryChildren.map((detl: any) => {
-          var string: any = detl.name.toString();
+          var string: any = detl.id.toString();
           // let result: any = string.replaceAll(" ", "-");
-          newurl = slug + "/" + newurl + "/" + string.toLowerCase().replaceAll(" ", "-") + ".html";
+          newurl =  string.toLowerCase().replaceAll(" ", "-") + ".html";
            console.log(newurl,"575524")
         })
         // let slugs =
