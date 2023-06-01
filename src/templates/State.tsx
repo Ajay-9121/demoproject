@@ -241,8 +241,8 @@ const region: Template<TemplateRenderProps> = ({
         entity.dm_directoryChildren.map((detl: any) => {
           var string: any = detl.name.toString();
           // let result: any = string.replaceAll(" ", "-");
-          newurl = slug + "/" + newurl + "/" + string.toLowerCase().replaceAll(" ", "-") + ".html";
-          //  console.log(newurl,"575524")
+          newurl =   string.toLowerCase().replaceAll(" ", "-") + ".html";
+          //  console.log(newurl,"Detailpage")
         })
         // let slugs =
         //   links+"/" + entity?.dm_directoryChildren[0]?.name.toLowerCase() + ".html";
@@ -255,8 +255,8 @@ const region: Template<TemplateRenderProps> = ({
           </div>
         );
       } else {
-        // console.log(dm_directoryParents&&dm_directoryParents[1]&&dm_directoryParents[1].slug,'jghhfhhhjhhhhh')
-        let slug =
+       
+        let multislug =
           "/" +
           dm_directoryParents[1]?.slug +
           "/" +
@@ -264,9 +264,10 @@ const region: Template<TemplateRenderProps> = ({
           "/" +
           entity.slug +
           ".html";
+          console.log(multislug,"show multiple location")
         return (
           <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4 test">
-            <a key={entity.slug} href={slug} className="hover:text-red">
+            <a key={entity.slug} href={multislug} className="hover:text-red">
               {entity.name} ({entity.dm_baseEntityCount})
             </a>
           </div>
