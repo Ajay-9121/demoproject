@@ -178,7 +178,7 @@
 				}
 			],
 			"name": "Edinburgh",
-			"slug": "edinburgh"
+			"slug": "stores-directory_gb_scotland_edinburgh"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -196,7 +196,7 @@
 				}
 			],
 			"name": "Hamilton",
-			"slug": "hamilton"
+			"slug": "stores-directory_gb_scotland_hamilton"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -214,7 +214,7 @@
 				}
 			],
 			"name": "Paisley",
-			"slug": "paisley"
+			"slug": "stores-directory_gb_scotland_paisley"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -232,7 +232,7 @@
 				}
 			],
 			"name": "Dunfermline",
-			"slug": "dunfermline"
+			"slug": "stores-directory_gb_scotland_dunfermline"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -250,7 +250,7 @@
 				}
 			],
 			"name": "Perth",
-			"slug": "perth"
+			"slug": "stores-directory_gb_scotland_perth"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -268,7 +268,7 @@
 				}
 			],
 			"name": "Grangemouth",
-			"slug": "grangemouth"
+			"slug": "stores-directory_gb_scotland_grangemouth"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -286,7 +286,7 @@
 				}
 			],
 			"name": "Wishaw",
-			"slug": "wishaw"
+			"slug": "stores-directory_gb_scotland_wishaw"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -304,7 +304,7 @@
 				}
 			],
 			"name": "Glenrothes",
-			"slug": "glenrothes"
+			"slug": "stores-directory_gb_scotland_glenrothes"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -322,7 +322,7 @@
 				}
 			],
 			"name": "Dundee",
-			"slug": "dundee"
+			"slug": "stores-directory_gb_scotland_dundee"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -340,7 +340,7 @@
 				}
 			],
 			"name": "Prestwick",
-			"slug": "prestwick"
+			"slug": "stores-directory_gb_scotland_prestwick"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -358,7 +358,7 @@
 				}
 			],
 			"name": "Glasgow",
-			"slug": "glasgow"
+			"slug": "stores-directory_gb_scotland_glasgow"
 		},
 		{
 			"dm_baseEntityCount": "1",
@@ -376,7 +376,7 @@
 				}
 			],
 			"name": "Broxburn",
-			"slug": "broxburn"
+			"slug": "stores-directory_gb_scotland_broxburn"
 		}
 	],
 	"dm_directoryParents": [
