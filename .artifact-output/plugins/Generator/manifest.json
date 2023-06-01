@@ -1,12 +1,12 @@
 {
   "bundlePaths": {
     "404": "assets/server/404.a193b5e7.js",
-    "city": "assets/server/city.0645c385.js",
-    "country": "assets/server/country.5182524c.js",
-    "location": "assets/server/location.aa088d47.js",
+    "city": "assets/server/city.48113606.js",
+    "country": "assets/server/country.3db32f5b.js",
+    "location": "assets/server/location.486ff6e9.js",
     "locator": "assets/server/locator.8774a82e.js",
     "robots": "assets/server/robots.56cad661.js",
-    "State": "assets/server/State.cf6b509e.js"
+    "State": "assets/server/State.9a124fcc.js"
   },
   "projectFilepaths": {
     "templatesRoot": "src/templates",
@@ -45,21 +45,25 @@
       "file": "assets/static/watch-icn-12e4a5d9.svg",
       "src": "src/images/watch-icn.svg"
     },
-    "src/images/MGMhover1.svg": {
-      "file": "assets/static/MGMhover1-bbbef0ea.svg",
-      "src": "src/images/MGMhover1.svg"
-    },
     "src/images/map-center.svg": {
       "file": "assets/static/map-center-30f9adc5.svg",
       "src": "src/images/map-center.svg"
     },
-    "src/images/dots.svg": {
-      "file": "assets/static/dots-c532748f.svg",
-      "src": "src/images/dots.svg"
+    "src/images/MGMhover1.svg": {
+      "file": "assets/static/MGMhover1-bbbef0ea.svg",
+      "src": "src/images/MGMhover1.svg"
     },
     "src/images/minus-sym.svg": {
       "file": "assets/static/minus-sym-f0f517fd.svg",
       "src": "src/images/minus-sym.svg"
+    },
+    "src/images/shape-b.svg": {
+      "file": "assets/static/shape-b-bdecdd2a.svg",
+      "src": "src/images/shape-b.svg"
+    },
+    "src/images/dots.svg": {
+      "file": "assets/static/dots-c532748f.svg",
+      "src": "src/images/dots.svg"
     },
     "src/images/plus-sym.svg": {
       "file": "assets/static/plus-sym-e2bf518e.svg",
@@ -68,10 +72,6 @@
     "src/images/shape-t.svg": {
       "file": "assets/static/shape-t-4e865b2a.svg",
       "src": "src/images/shape-t.svg"
-    },
-    "src/images/shape-b.svg": {
-      "file": "assets/static/shape-b-bdecdd2a.svg",
-      "src": "src/images/shape-b.svg"
     },
     "src/images/newsletter-bg.png": {
       "file": "assets/static/newsletter-bg-6b390772.png",
@@ -102,7 +102,7 @@
       ]
     },
     "dist/hydration_templates/city.tsx": {
-      "file": "assets/hydrate/city.244249a6.js",
+      "file": "assets/hydrate/city.c56bb044.js",
       "src": "dist/hydration_templates/city.tsx",
       "isEntry": true,
       "imports": [
@@ -117,7 +117,7 @@
       ]
     },
     "src/templates/city.tsx": {
-      "file": "assets/server/city.0645c385.js",
+      "file": "assets/server/city.48113606.js",
       "src": "src/templates/city.tsx",
       "isEntry": true,
       "imports": [
@@ -130,7 +130,7 @@
       ]
     },
     "dist/hydration_templates/country.tsx": {
-      "file": "assets/hydrate/country.8e0b61b4.js",
+      "file": "assets/hydrate/country.f77f3b3e.js",
       "src": "dist/hydration_templates/country.tsx",
       "isEntry": true,
       "imports": [
@@ -144,7 +144,7 @@
       ]
     },
     "src/templates/country.tsx": {
-      "file": "assets/server/country.5182524c.js",
+      "file": "assets/server/country.3db32f5b.js",
       "src": "src/templates/country.tsx",
       "isEntry": true,
       "imports": [
@@ -156,7 +156,7 @@
       ]
     },
     "dist/hydration_templates/location.tsx": {
-      "file": "assets/hydrate/location.c06ec429.js",
+      "file": "assets/hydrate/location.daee7645.js",
       "src": "dist/hydration_templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -174,7 +174,7 @@
       ]
     },
     "src/templates/location.tsx": {
-      "file": "assets/server/location.aa088d47.js",
+      "file": "assets/server/location.486ff6e9.js",
       "src": "src/templates/location.tsx",
       "isEntry": true,
       "imports": [
@@ -249,7 +249,7 @@
       ]
     },
     "dist/hydration_templates/State.tsx": {
-      "file": "assets/hydrate/State.b7dfaf15.js",
+      "file": "assets/hydrate/State.fd73d0ec.js",
       "src": "dist/hydration_templates/State.tsx",
       "isEntry": true,
       "imports": [
@@ -263,7 +263,7 @@
       ]
     },
     "src/templates/State.tsx": {
-      "file": "assets/server/State.cf6b509e.js",
+      "file": "assets/server/State.9a124fcc.js",
       "src": "src/templates/State.tsx",
       "isEntry": true,
       "imports": [
@@ -359,10 +359,6 @@
         "assets/static/MGMpin-0521d029.svg"
       ]
     },
-    "answersHeadlessConfig.css": {
-      "file": "assets/static/answersHeadlessConfig-3ef2054a.css",
-      "src": "answersHeadlessConfig.css"
-    },
     "src/templates/location.css": {
       "file": "assets/static/location-55d13414.css",
       "src": "src/templates/location.css"
@@ -370,6 +366,10 @@
     "src/templates/locator.css": {
       "file": "assets/static/locator-7e1d7cb8.css",
       "src": "src/templates/locator.css"
+    },
+    "answersHeadlessConfig.css": {
+      "file": "assets/static/answersHeadlessConfig-3ef2054a.css",
+      "src": "answersHeadlessConfig.css"
     },
     "jsx-runtime.css": {
       "file": "assets/static/jsx-runtime-dde99054.css",

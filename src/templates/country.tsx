@@ -194,27 +194,30 @@ const country: Template<TemplateRenderProps> = ({
     if (typeof entity.dm_directoryChildren != "undefined") {
       if (entity.dm_baseEntityCount == 1) {
         entity.dm_directoryChildren.map((res: any) => {
-          // console.log(res,"123456")
+          // console.log(res,"details")
 
           let detlslug1 = "";
 
-          if (!res.slug) {
-            let slugString = res.id + " " + res.name;
-            let slug = slugString;
-            detlslug1 = `${slug}.html`;
-          } else {
-            detlslug1 = `${res.slug.toString()}.html`;
-          }
+          // if (!res.slug) {
+          //   let slugString = res.id ;
+          //   let slug = slugString;
+          //   detlslug1 = `${slug}.html`;
+          //   console.log(detlslug1,"detailspage1")
+          // } else {
+          //   detlslug1 = `${res.slug.toString()}.html`;
+          //   console.log(detlslug1,"dteailspage")
+          // }
 
           res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
             // console.log(detl,"123456")
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
-              detlslug1 = document.slug + "/" + entity.slug + "/" + res.slug + "/" + slug.toLowerCase().replaceAll(" ", "-") + ".html";
-              // console.log(detlslug1,"123456")
+              detlslug1 =res.slug.toLowerCase().replaceAll(" ", "-") + ".html";
+              console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
+
             }
             detlslug = detlslug1;
           }) : detlslug = detlslug1;
@@ -222,7 +225,7 @@ const country: Template<TemplateRenderProps> = ({
       }
       else {
         detlslug = slug + "/" + entity.slug + ".html";
-        console.log(detlslug,"detlslug")
+        // console.log(detlslug,"detlslugdfgdsgdf")
       }
     }
 
