@@ -233,6 +233,7 @@ const City: Template<TemplateRenderProps> = ({
   let slugString = "";
   document.dm_directoryParents.forEach((e: any) => {
     slugString += e.slug + "/";
+    
   });
 
   const childrenDivs = dm_directoryChildren?.map((entity: any) => {
@@ -247,7 +248,7 @@ const City: Template<TemplateRenderProps> = ({
     }
     // let key: any = Object.keys(entity.hours)[0];
     var url = "";
-    var name: any = entity.id.toLowerCase();
+    var name: any = entity.id;
     var region: any = entity.address.region.toLowerCase();
     var initialregion: any = region.toString();
     var finalregion: any = initialregion.replaceAll(" ", "-");
@@ -258,7 +259,8 @@ const City: Template<TemplateRenderProps> = ({
     let result: any = string.replaceAll(" ", "-");
     // let newlink: any = 
     if (!entity.slug) {
-      url = document.slug + "/" + `${result}.html`;
+      url =  `/${result}.html`;
+      console.log(url,"dlhsadlhfsjkl")
     } else {
       url = `/${entity.slug.toString()}.html`;
       console.log(url,"city url")
@@ -385,6 +387,7 @@ const City: Template<TemplateRenderProps> = ({
     }
     else if (i.meta.entityType.id == 'ce_region') {
       url = `${url}/${i.slug}/${document.slug.toString()}.html`
+      
     }
   })
   let breadcrumbScheme: any = [];

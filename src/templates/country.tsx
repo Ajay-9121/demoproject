@@ -193,17 +193,20 @@ const country: Template<TemplateRenderProps> = ({
 
     if (typeof entity.dm_directoryChildren != "undefined") {
       if (entity.dm_baseEntityCount == 1) {
+       
         entity.dm_directoryChildren.map((res: any) => {
-          // console.log(res,"123456")
-
+          // console.log(res,"xydgksd")
+          
           let detlslug1 = "";
 
           if (!res.slug) {
             let slugString = res.id + " " + res.name;
             let slug = slugString;
             detlslug1 = `${slug}.html`;
+            console.log(detlslug1,"ajay")
+           
           } else {
-            detlslug1 = `${res.slug.toString()}.html`;
+            detlslug1 = `/${res.slug.toString()}.html`;
             console.log(detlslug1,"singlrdetaila")
           }
 
@@ -212,8 +215,8 @@ const country: Template<TemplateRenderProps> = ({
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
-              detlslug1 = document.slug + "/" + entity.slug + "/" + res.slug + "/" + slug.toLowerCase().replaceAll(" ", "-") + ".html";
-              // console.log(detlslug1,"123456")
+              detlslug1 = document.slug + "/" + entity.slug + "/" + res.slug + "/" + slug.toLowerCase().replaceAll(" ", "-") + ".tml";
+              console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
             }
