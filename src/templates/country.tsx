@@ -195,19 +195,19 @@ const country: Template<TemplateRenderProps> = ({
       if (entity.dm_baseEntityCount == 1) {
        
         entity.dm_directoryChildren.map((res: any) => {
-          // console.log(res,"xydgksd")
+          console.log(res,"xydgksd")
           
           let detlslug1 = "";
 
           if (!res.slug) {
-            let slugString = res.id + " " + res.name;
+            let slugString = res.slug;
             let slug = slugString;
             detlslug1 = `${slug}.html`;
-            console.log(detlslug1,"ajay")
+            // console.log(detlslug1,"ajay")
            
           } else {
-            detlslug1 = `/${res.slug.toString()}.html`;
-            console.log(detlslug1,"singlrdetaila")
+            detlslug1 = `/${res.id}.html`;
+            console.log(detlslug1,"naman")
           }
 
           res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
@@ -215,7 +215,7 @@ const country: Template<TemplateRenderProps> = ({
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
-              detlslug1 = document.slug + "/" + entity.slug + "/" + res.slug + "/" + slug.toLowerCase().replaceAll(" ", "-") + ".tml";
+              detlslug1 =  `/${slug}`;
               console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
