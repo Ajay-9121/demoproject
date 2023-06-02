@@ -255,11 +255,11 @@ const City: Template<TemplateRenderProps> = ({
     var city: any = entity.address.city.toLowerCase();
     var initialrcity: any = city.toString();
     var finalcity: any = initialrcity.replaceAll(" ", "-");
-    var string: any = name.toString();;
-    let result: any = string.replaceAll(" ", "-");
+    var string: any = name
+    let result: any = string
     // let newlink: any = 
     if (!entity.slug) {
-      url =  `/${result}.html`;
+      url =  `/${result}`;
       console.log(url,"dlhsadlhfsjkl")
     } else {
       url = `/${entity.slug.toString()}.html`;
