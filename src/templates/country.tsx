@@ -206,7 +206,7 @@ const country: Template<TemplateRenderProps> = ({
             // console.log(detlslug1,"ajay")
            
           } else {
-            detlslug1 = `/${res.id}.html`;
+            detlslug1 = `/${res.slug}.html`;
             console.log(detlslug1,"naman")
           }
 
@@ -215,7 +215,7 @@ const country: Template<TemplateRenderProps> = ({
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
-              detlslug1 =  `/${slug}`;
+              detlslug1 = `/${ slug.toLowerCase().replaceAll(" ", "-")}`;
               console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
