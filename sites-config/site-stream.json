@@ -10,7 +10,10 @@
       "c_headerMenu",
       "c_footer",
       "c_paymentGetway",
-      "c_socialicon"
+      "c_socialicon",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.meta.entityType"
 
   ],
   "localization": {

@@ -22,6 +22,7 @@ export default function Nearby(props: any) {
   return (
 
     <>
+    
       {/* <Splide
         id="splide-nearby"
         options={{
@@ -76,6 +77,7 @@ export default function Nearby(props: any) {
                     </div>
                     <div className="icon-row content-col">
                       <Address address={location.data.address} />
+                      
                     </div>
                     <div>{location.data.mainPhone}</div>
                     

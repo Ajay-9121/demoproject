@@ -182,6 +182,7 @@ const country: Template<TemplateRenderProps> = ({
   const {
     name,
     slug,
+    id,
     _site,
     address,
     c_locatorBannerImage,
@@ -196,27 +197,27 @@ const country: Template<TemplateRenderProps> = ({
        
         entity.dm_directoryChildren.map((res: any) => {
           console.log(res,"xydgksd")
-          
           let detlslug1 = "";
-
           if (!res.slug) {
-            let slugString = res.slug;
+            let slugString = res.id + " " + res.name;
             let slug = slugString;
             detlslug1 = `${slug}.html`;
-            // console.log(detlslug1,"ajay")
-           
+            console.log(detlslug1,"ajay")
           } else {
             detlslug1 = `/${res.slug}.html`;
             console.log(detlslug1,"naman")
           }
-
           res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
             // console.log(detl,"123456")
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
-              detlslug1 = `/${ slug.toLowerCase().replaceAll(" ", "-")}`;
-              console.log(detlslug1,"123456")
+
+              let newslug = slug.replaceAll("MGM Timber Inverness", 'MGMInverness');
+
+              console.log(newslug, "newslug")
+              detlslug1 = newslug;
+              // console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
             }
