@@ -215,11 +215,10 @@ const country: Template<TemplateRenderProps> = ({
               let slug = slugString;
 
               let newslug = slug.replaceAll("MGM Timber Inverness", 'MGMInverness');
-
               
               // detlslug1 = newslug
-              detlslug1 = entity.slug+"/"+res.slug+"/"+newslug;
-              // console.log(detlslug1,"123456")
+              detlslug1 = entity.slug+"/"+res.name+"/"+newslug;
+              console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
               console.log(detlslug1,"snhdkshdfskh")
@@ -230,7 +229,7 @@ const country: Template<TemplateRenderProps> = ({
       }
       else {
         detlslug = slug + "/" + entity.slug + ".html";
-        // console.log(detlslug,"detlslug")
+        console.log(detlslug,"multiple")
       }
     }
 
