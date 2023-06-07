@@ -51,9 +51,9 @@ export function ResultsCountDisplay({
 
   const messageArray = [
     'Showing ',
-    offset + 1,
+    offset+1,
     ' to ',
-    offset + resultsLength,
+      offset + resultsLength,
     ' of ',
     resultsCount,
     ' Results'

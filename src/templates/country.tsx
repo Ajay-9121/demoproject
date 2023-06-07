@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../index.css";
+import "../custom.css";
 import {
   Template,
   GetPath,
@@ -14,7 +15,7 @@ import { StaticData } from "../../sites-global/staticData";
 import { favicon, regionNames, stagingBaseurl } from "../../sites-global/global";
 import NewHeader from "../components/layouts/NewHeader";
 import NewFooter from "../components/layouts/NewFooter";
-
+import PageLayout from "../components/layouts/PageLayout";
 /**
  * Required when Knowledge Graph data is used for a template.
  */
@@ -215,11 +216,13 @@ const country: Template<TemplateRenderProps> = ({
 
               let newslug = slug.replaceAll("MGM Timber Inverness", 'MGMInverness');
 
-              console.log(newslug, "newslug")
-              detlslug1 = newslug;
+              
+              // detlslug1 = newslug
+              detlslug1 = entity.slug+"/"+res.slug+"/"+newslug;
               // console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
+              console.log(detlslug1,"snhdkshdfskh")
             }
             detlslug = detlslug1;
           }) : detlslug = detlslug1;
@@ -248,7 +251,7 @@ const country: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      {/* <NewHeader prop={_site} /> */}
+     <PageLayout _site={_site} global={undefined}>
       <BreadCrumbs
         name={regionNames.of(name)}
         address={address}
@@ -267,7 +270,7 @@ const country: Template<TemplateRenderProps> = ({
           </ul>
         </div>
       </div>
-      {/* <NewFooter prop={_site} /> */}
+      </PageLayout>
     </>
   );
 };

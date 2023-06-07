@@ -5,6 +5,7 @@ import constant from "../constant";
 // import { stagingBaseUrl } from "../constants";
 // import bannerImage from "../images/banner.png"
 import "../index.css";
+import "../custom.css";
 var currentUrl = "";
 import {
   Template,
@@ -22,14 +23,11 @@ import { StaticData } from "../../sites-global/staticData";
 import { Addresssvg, favicon, mobilesvg, regionNames, stagingBaseurl } from "../../sites-global/global";
 import { JsonLd } from "react-schemaorg";
 import Address from "../components/commons/Address";
-// import PageLayout from "../components/layouts/PageLayout";
+import PageLayout from "../components/layouts/PageLayout";
 import OpenClose from "../components/commons/openClose";
 // import timesvg from "../images/watch-icn.svg";
 import { Link } from "@yext/pages/components";
-// import Footer1 from "../components/layouts/NewFooter";
-// import Header from "../components/layouts/NewHeader";
-// import NewHeader from "../components/layouts/NewHeader";
-// import NewFooter from "../components/layouts/NewFooter";
+
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
@@ -259,7 +257,8 @@ const City: Template<TemplateRenderProps> = ({
     let result: any = string
     // let newlink: any = 
     if (!entity.slug) {
-      url =  `/${result}`;
+      // url =  `/${result}`;
+      url =  `${ result}`;
       console.log(url,"dlhsadlhfsjkl")
     } else {
       url = `/${entity.slug.toString()}.html`;
@@ -434,7 +433,7 @@ const City: Template<TemplateRenderProps> = ({
           itemListElement: breadcrumbScheme,
         }}
       />
-      {/* <NewHeader prop={_site} /> */}
+         <PageLayout _site={_site} global={undefined}>
       <BreadCrumbs
         name={name}
         address={address}
@@ -446,7 +445,7 @@ const City: Template<TemplateRenderProps> = ({
         <div className="container mx-auto">
           <div className="sec-title">
             <h2>
-              Eye Glass World Stores in {name}
+               World Stores in {name}
             </h2>
           </div>
           <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">
@@ -454,7 +453,7 @@ const City: Template<TemplateRenderProps> = ({
           </div>
         </div>
       </div>
-      {/* <NewFooter prop={_site} /> */}
+    </PageLayout>
     </>
   );
 };

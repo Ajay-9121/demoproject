@@ -18,6 +18,7 @@ export default function Nearby(props: any) {
     const miles = meters * 0.000621371;
     return miles.toFixed(2);
   }
+  console.log(neabyData)
 
   return (
 
@@ -45,7 +46,8 @@ export default function Nearby(props: any) {
           },
         }}
       > */}
-        {neabyData.map((location: any, index: Number) => {
+        {neabyData.map((location: any, index: number) => {
+         
 
           // let url = "";
           // var name: any = location.data.name?.toLowerCase();
@@ -77,6 +79,9 @@ export default function Nearby(props: any) {
                     </div>
                     <div className="icon-row content-col">
                       <Address address={location.data.address} />
+                      <div className="distance">
+                      {metersToMiles(location.distance)}<span>miles</span>
+                      </div>
                       
                     </div>
                     <div>{location.data.mainPhone}</div>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../index.css";
+import "../custom.css";
 import {
   Template,
   GetPath,
@@ -16,10 +17,7 @@ import Banner from "../components/locationDetail/banner";
 import PageLayout from "../components/layouts/PageLayout";
 import { favicon, stagingBaseurl } from "../../sites-global/global";
 import { StaticData } from "../../sites-global/staticData";
-import Footer1 from "../components/layouts/NewFooter";
-import Header from "../components/layouts/NewHeader";
-import NewFooter from "../components/layouts/NewFooter";
-import NewHeader from "../components/layouts/NewHeader";
+
 
 
 
@@ -279,7 +277,7 @@ const region: Template<TemplateRenderProps> = ({
   // let bannerimage = c_banner_image && c_banner_image.image.url;
   return (
     <>
-      {/* <NewHeader prop={_site} /> */}
+        <PageLayout _site={_site} global={undefined}>
       <BreadCrumbs
         name={name}
         parents={dm_directoryParents}
@@ -304,7 +302,7 @@ const region: Template<TemplateRenderProps> = ({
       </div>
 
 
-      {/* <NewFooter prop={_site} /> */}
+     </PageLayout>
     </>
   )
 }

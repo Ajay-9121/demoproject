@@ -161,7 +161,6 @@
 			},
 			"hours": {
 				"friday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -169,19 +168,7 @@
 						}
 					]
 				},
-				"holidayHours": [
-					{
-						"date": "2023-05-31",
-						"openIntervals": [
-							{
-								"end": "17:00",
-								"start": "07:00"
-							}
-						]
-					}
-				],
 				"monday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -190,7 +177,6 @@
 					]
 				},
 				"saturday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -199,7 +185,6 @@
 					]
 				},
 				"sunday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -208,7 +193,6 @@
 					]
 				},
 				"thursday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -217,7 +201,6 @@
 					]
 				},
 				"tuesday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
@@ -226,7 +209,6 @@
 					]
 				},
 				"wednesday": {
-					"isClosed": false,
 					"openIntervals": [
 						{
 							"end": "17:00",
