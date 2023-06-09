@@ -216,10 +216,10 @@ const country: Template<TemplateRenderProps> = ({
               let slugString = detl.name;
               let slug = slugString;
 
-              let newslug = slug.replaceAll("MGM Timber Inverness", 'MGMInverness');
+              let newslug = slug.replaceAll(" ", '-');
               
               // detlslug1 = newslug
-              detlslug1 =   "gb/"+entity.slug+"/"+ res.slug  +"/"+newslug;
+              detlslug1 =   "gb/"+entity.slug+"/"+ res.slug  +"/"+newslug.toLowerCase()+ ".html";
               console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
