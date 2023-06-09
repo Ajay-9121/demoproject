@@ -237,9 +237,9 @@ const region: Template<TemplateRenderProps> = ({
       if (entity?.dm_baseEntityCount == 1) {
         newurl = entity.name;
         entity.dm_directoryChildren.map((detl: any) => {
-          var string: any = detl.id.toString();
-          // let result: any = string.replaceAll(" ", "-");
-          newurl =entity.slug +"/"+entity.name.toLowerCase()+ ".html";
+          var string: any = detl.name.replaceAll(" ", "-");
+          // let result: any = string.name.replaceAll(" ", "-");
+          newurl = document.slug + entity.slug +"/"+string.toLowerCase()+ ".html";
            console.log(newurl,"new slug details4")
         })
         // let slugs =
