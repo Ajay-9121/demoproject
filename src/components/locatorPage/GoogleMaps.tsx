@@ -118,8 +118,10 @@ function UnwrappedGoogleMaps({
   };
 
   const refLocationResults = useRef({});
-
-  const locationResults = useSearchState(state => state.vertical?.results) || [];
+  const locationResults = useFetchResults() || [];
+  
+  // const locationResults = useSearchState(state => state.vertical?.results) || [];
+  console.log(locationResults ,"show result count")
   refLocationResults.current = locationResults;
 
   locationResults.length > 0
@@ -226,11 +228,11 @@ function UnwrappedGoogleMaps({
       position,
       map,
       icon: Mapicon2,
-      // label: {
-      //   text: String(i),
-      //   color: "white",
-      // },
-      // animation: google.maps.Animation.DROP
+      label: {
+        text: String(i),
+        color: "white",
+      },
+      animation: google.maps.Animation.DROP
     });
 
     const location = new google.maps.LatLng(position.lat, position.lng);
@@ -477,20 +479,20 @@ function UnwrappedGoogleMaps({
     info = true;
     let url = "";
 
-    // const name: any = result.rawData.name?.toLowerCase();
-    // const region: any = result.rawData.address.region?.toLowerCase();
-    // const initialregion: any = region.toString();
-    // const finalregion: any = initialregion.replaceAll(" ", "-");
-    // const city: any = result.rawData.address.city?.toLowerCase();
-    // const initialrcity: any = city.toString();
-    // const finalcity: any = initialrcity.replaceAll(" ", "-");
-    // const string1: any = name.toString();
-    // const result1: any = string1.replaceAll(" ", "-");
-    // if (!result.rawData.slug) {
-    //   url = `${result.rawData.id}-${result1}.html`;
-    // } else {
-    //   url = `${result.rawData.slug.toString()}.html`;
-    // }
+    const name: any = result.rawData.name?.toLowerCase();
+    const region: any = result.rawData.address.region?.toLowerCase();
+    const initialregion: any = region.toString();
+    const finalregion: any = initialregion.replaceAll(" ", "-");
+    const city: any = result.rawData.address.city?.toLowerCase();
+    const initialrcity: any = city.toString();
+    const finalcity: any = initialrcity.replaceAll(" ", "-");
+    const string1: any = name.toString();
+    const result1: any = string1.replaceAll(" ", "-");
+    if (!result.rawData.slug) {
+      url = `${result.rawData.id}-${result1}.html`;
+    } else {
+      url = `${result.rawData.slug.toString()}.html`;
+    }
 
     const MarkerContent = (
       <>

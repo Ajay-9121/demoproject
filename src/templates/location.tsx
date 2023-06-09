@@ -32,7 +32,7 @@ import Menu from "../components/locationDetail/Menu";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
 import PhotoGallery from "../components/locationDetail/PhotoGallery";
 import About from "../components/locationDetail/About";
-import Breadcrumb from "../components/layouts/Breadcrumb";
+
 import CustomMap from "../components/locationDetail/CustomMap";
 import BreadCrumbs from "../components/layouts/Breadcrumb";
 import StoreHighlight from "../components/locationDetail/SoreHighlight";
@@ -104,7 +104,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   var name: any = document.name.toLowerCase();
   var string: any = name.toString();;
   let result: any = string.replaceAll(" ", "-");
-  document.dm_directoryParents.map((result: any, i: Number) => {
+  document.dm_directoryParents.map((result: any, i: number) => {
     if (i > 0) {
       url += result.slug + "/"
     }
@@ -114,8 +114,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   } else {
     url += `${document.slug.toString()}.html`;
   }
-  
+ 
   return url;
+  
   
 };
 /**
@@ -169,15 +170,15 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         },
       },
 
-      // {
-      //   type: "link",
-      //   attributes: {
-      //     rel: "canonical",
-      //     href: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
+      {
+        type: "link",
+        attributes: {
+          rel: "canonical",
+          href: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
 
-      //       }${document.slug?document.slug:`${document.name.toLowerCase()}`}.html`,
-      //   },
-      // },
+            }${document.slug?document.slug:`${document.name.toLowerCase()}`}.html`,
+        },
+      },
 
       {
         type: "meta",

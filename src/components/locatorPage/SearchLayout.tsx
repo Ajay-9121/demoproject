@@ -38,6 +38,7 @@ const SearchLayout = (props: any): JSX.Element => {
   const locationResults = useFetchResults() || [];
   const locationinbuit=useSearchState(state => state.vertical?.results) || [];
   const alternateresult=useSearchState(state => state.vertical?.results?.length) || 0;
+  console.log(alternateresult,"aletrnateresult")
   const[displaymsg,setDisplaymsg]=useState(false);
   const [inputvalue, setInputValue] = React.useState('');
   // const [inputvalue, setInputValue] = React.useState('');
@@ -346,7 +347,8 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
                 <VerticalResults
                   displayAllOnNoResults={false}
                   CardComponent={LocationCard}
-                  locationResults={locationinbuit}
+                  locationResults={locationResults}
+                  
                   customCssClasses={{
                     container:
                       "result-list flex flex-col scroll-smooth  overflow-auto",

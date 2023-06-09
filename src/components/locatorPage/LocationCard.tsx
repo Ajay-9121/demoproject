@@ -37,20 +37,25 @@ function opentime(e: any) {
 }
 
     const { address } = result.rawData;
-//     var name: any = result.rawData.name?.toLowerCase();
-//   var region: any = result.rawData.address.region?.toLowerCase();
-//   var initialregion: any = region.toString();
-//   var finalregion: any = initialregion.replaceAll(" ", "-");
-//   var city: any = result.rawData.address.city?.toLowerCase();
-//   var initialrcity: any = city.toString();
-//   var finalcity: any = initialrcity.replaceAll(" ", "-");
-//   var string: any = name.toString();
-//   let result1: any = string.replaceAll(" ", "-");
-//  if (!result.rawData.slug) {
-//    url= `/${result.rawData.id}-${result1}.html`;
-//  } else {
-//    url= `/${result.rawData.slug.toString()}.html`;
-//  }
+    var name: any = result.rawData.name?.toLowerCase();
+  var region: any = result.rawData.address.region?.toLowerCase();
+  var initialregion: any = region.toString();
+  var finalregion: any = initialregion.replaceAll(" ", "-");
+  var city: any = result.rawData.address.city?.toLowerCase();
+  var initialrcity: any = city.toString();
+  var finalcity: any = initialrcity.replaceAll(" ", "-");
+  var country: any = result.rawData.address.countryCode?.toLowerCase();
+  var initialrcountry: any = country.toString();
+  var finalcountry: any = initialrcountry.replaceAll(" ", "-");
+  var string: any = name.toString();
+  let result1: any = string.replaceAll(" ", "-");
+ if (!result.rawData.slug) {
+   url= finalcountry + "/" + finalregion + "/" + finalcity + `/${result.rawData.id}.html`;
+   console.log(url,"ajjju")
+ } else {
+   url= `/${result.rawData.slug.toString()}.html`;
+  //  console.log(url,"sdhidshfgsuk")
+ }
   
   return (
     <div className={`location result-list-inner-${result.id} result`} id={`result-${result.id}`} key={`result-${result.rawData.id}`}>

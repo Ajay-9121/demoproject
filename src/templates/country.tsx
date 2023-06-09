@@ -202,6 +202,7 @@ const country: Template<TemplateRenderProps> = ({
           if (!res.slug) {
             let slugString = res.id + " " + res.name;
             let slug = slugString;
+          
             detlslug1 = `${slug}.html`;
             console.log(detlslug1,"ajay")
           } else {
@@ -209,7 +210,7 @@ const country: Template<TemplateRenderProps> = ({
             console.log(detlslug1,"naman")
           }
           res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
-            // console.log(detl,"123456")
+            
             if (!detl.slug) {
               let slugString = detl.name;
               let slug = slugString;
@@ -217,11 +218,11 @@ const country: Template<TemplateRenderProps> = ({
               let newslug = slug.replaceAll("MGM Timber Inverness", 'MGMInverness');
               
               // detlslug1 = newslug
-              detlslug1 = entity.slug+"/"+res.name+"/"+newslug;
+              detlslug1 =   entity.slug +"/" + newslug+ ".html";
               console.log(detlslug1,"123456")
             } else {
               detlslug1 = `${detl.slug.toString()}.html`;
-              console.log(detlslug1,"snhdkshdfskh")
+              // console.log(detlslug1,"snhdkshdfskh")
             }
             detlslug = detlslug1;
           }) : detlslug = detlslug1;
