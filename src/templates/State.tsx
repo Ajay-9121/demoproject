@@ -235,12 +235,12 @@ const region: Template<TemplateRenderProps> = ({
     dm_directoryChildren &&
     dm_directoryChildren?.map((entity: any) => {
       if (entity?.dm_baseEntityCount == 1) {
-        newurl = entity.id;
+        newurl = entity.name;
         entity.dm_directoryChildren.map((detl: any) => {
           var string: any = detl.id.toString();
           // let result: any = string.replaceAll(" ", "-");
-          newurl = `/${string}`;
-           console.log(newurl,"575524")
+          newurl =entity.slug +"/"+entity.name.toLowerCase()+ ".html";
+           console.log(newurl,"new slug details4")
         })
         // let slugs =
         //   links+"/" + entity?.dm_directoryChildren[0]?.name.toLowerCase() + ".html";
@@ -262,6 +262,7 @@ const region: Template<TemplateRenderProps> = ({
           "/" +
           entity.slug +
           ".html";
+          console.log(slug,"release slug")
         return (
           <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4 test">
             <a key={entity.slug} href={slug} className="hover:text-red">
