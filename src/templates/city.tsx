@@ -223,11 +223,11 @@ const City: Template<TemplateRenderProps> = ({
     _site,
   } = document;
   var address;
-  // var sortedChildren = dm_directoryChildren.sort(function (a: any, b: any) {
-  //   var a = a.name;
-  //   var b = b.name;
-  //   return a < b ? -1 : a > b ? 1 : 0;
-  // });
+  var sortedChildren = dm_directoryChildren.sort(function (a: any, b: any) {
+    var a = a.name;
+    var b = b.name;
+    return a < b ? -1 : a > b ? 1 : 0;
+  });
   const links = document.slug;
   // console.log(links, "link")
   let slugString = "";

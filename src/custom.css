@@ -299,3 +299,13 @@
 	vertical-align: bottom;
 	overflow: hidden;
 }
+.link-sec-footer {
+	width: 65%;
+	flex-direction: row;
+	padding-left: 0px;
+	padding-right: 1.25rem;
+}
+.payment-icon {
+	margin-right: -8%;
+	margin-top: 22%;
+}
