@@ -320,7 +320,7 @@ const City: Template<TemplateRenderProps> = ({
               </div>
               <div className="icon-row content-col availability-col flex flex-row">
                 <div className="button-bx flex flex-row w-72">
-                  <Link className="btn" href={mainurl} eventName={`storeDetails`}>
+                  <Link className="btn" href={url} eventName={`storeDetails`}>
                     View Store
                   </Link>
                   <GetDirection
