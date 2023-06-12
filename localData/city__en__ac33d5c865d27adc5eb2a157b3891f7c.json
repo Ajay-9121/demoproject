@@ -227,6 +227,7 @@
 			"id": "MGMEdinburgh",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Edinburgh",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 55.9328298,
 				"longitude": -3.1018496
@@ -308,6 +309,7 @@
 			"id": "MGMEdiCity",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Edinburgh City",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 55.963481,
 				"longitude": -3.1649086

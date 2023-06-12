@@ -220,6 +220,7 @@
 			"id": "MGMDundee",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Dundee",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 56.4774039,
 				"longitude": -2.9843739

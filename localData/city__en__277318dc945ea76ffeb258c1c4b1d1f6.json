@@ -227,6 +227,7 @@
 			"id": "MGMPaisley",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Paisley",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 55.8526722,
 				"longitude": -4.4386278

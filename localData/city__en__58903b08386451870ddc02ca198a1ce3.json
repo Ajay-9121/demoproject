@@ -227,6 +227,7 @@
 			"id": "MGMGlenrothes",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Glenrothes",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 56.1851978,
 				"longitude": -3.1506726

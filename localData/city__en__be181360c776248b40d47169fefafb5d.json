@@ -227,6 +227,7 @@
 			"id": "MGMHamilton",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Hamilton",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 55.7747608,
 				"longitude": -4.055238699999999

@@ -227,6 +227,7 @@
 			"id": "MGMPerth",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Perth",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 56.418947,
 				"longitude": -3.4772353

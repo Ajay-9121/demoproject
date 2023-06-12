@@ -227,6 +227,7 @@
 			"id": "MGMInverness",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Inverness",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 57.4918083,
 				"longitude": -4.2311946

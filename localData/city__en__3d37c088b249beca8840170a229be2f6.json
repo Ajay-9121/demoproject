@@ -227,6 +227,7 @@
 			"id": "MGMWishaw",
 			"mainPhone": "+441382817738",
 			"name": "MGM Timber Wishaw",
+			"timezone": "Europe/London",
 			"yextDisplayCoordinate": {
 				"latitude": 55.77161539999999,
 				"longitude": -3.9524257
