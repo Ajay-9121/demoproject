@@ -251,7 +251,7 @@ const City: Template<TemplateRenderProps> = ({
         let slugString = e.name.toLowerCase();
         var slugs: any = slugString.toString();
         let slug: any = slugs.replaceAll(" ", "-");
-        url = links + "/" + slug+"/"+".html";
+        url = links + "/" + slug +".html";
         console.log(url,"city url")
       } else {
         let slugString = e.id.toLowerCase();
