@@ -246,19 +246,23 @@ const City: Template<TemplateRenderProps> = ({
     }
     // let key: any = Object.keys(entity.hours)[0];
     var url = "";
-    var name: any = entity.id;
-    var region: any = entity.address.region.toLowerCase();
-    var initialregion: any = region.toString();
-    var finalregion: any = initialregion.replaceAll(" ", "-");
-    var city: any = entity.address.city.toLowerCase();
-    var initialrcity: any = city.toString();
-    var finalcity: any = initialrcity.replaceAll(" ", "-");
-    var string: any = name
-    let result: any = string
+    var name: string = entity.name;
+    var country=entity.address.countryCode.toLowerCase()
+    var region: string = entity.address.region.toLowerCase();
+    var initialregion: string = region.toString();
+    var finalregion: string = initialregion.replaceAll(" ", "-");
+    var city:string = entity.address.city.toLowerCase();
+   
+    var initialrcity: string = city.toString();
+    var finalcity: string = initialrcity.replaceAll(" ", "-");
+    console.log(finalcity,"city")
+    var string: string = name.replaceAll(" ", "-");
+    let result: string = string.toLowerCase()
+    console.log(result,"dgdfsgdgdfffddfffddffddf")
     // let newlink: any = 
     if (!entity.slug) {
-      // url =  `/${result}`;
-      url =  `${ result}`;
+      // url =  `${result}`;
+      url = country+ "/"+ finalregion+"/"+finalcity+"/"+result;
       console.log(url,"dlhsadlhfsjkl")
     } else {
       url = `/${entity.slug.toString()}.html`;
